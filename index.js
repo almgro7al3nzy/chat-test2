@@ -26,7 +26,7 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // ترحيب عام
-    socket.emit('message', formatMessage('الرسائل مقصورة على هذه الغرفة! '));
+    socket.emit('message', formatMessage("" ,'الرسائل مقصورة على هذه الغرفة! '));
 
     // بث في كل مرة يتصل فيها المستخدمون
     socket.broadcast
