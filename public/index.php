@@ -20,7 +20,7 @@
 				<h1><i class="fas fa-kiwi-bird"></i> WebCage </h1>
 			</header>
 			<main class="join-main">
-				<form action="chat.html">
+				<form action="chat.php">
 
 
 					<div class="form-control">
@@ -34,7 +34,6 @@
 						/>
 					</div>
 					<div class="form-control">
-						<label for="room">Chat Channel</label>
 						<select name="room" id="room">
 							<option value="عباس">عباس </option>
 							<option value="Technology">Technology</option>

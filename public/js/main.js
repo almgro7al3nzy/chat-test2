@@ -3,7 +3,7 @@ const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
-// Get username and room from URL
+// احصل على اسم المستخدم والغرفة من URL
 const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
@@ -12,29 +12,29 @@ console.log({username, room})
 
 const socket = io();
 
-// Join chatroom
+// انضم إلى غرفة الدردشة
 socket.emit('joinRoom', { username, room });
 
-// Get room and users
+// احصل على الغرفة والمستخدمين
 socket.on('roomUsers', ({ room, users }) => {
   outputRoomName(room);
   outputUsers(users);
 });
 
-// Message from server
+// رسالة من الخادم
 socket.on('message', (message) => {
   console.log(message);
   outputMessage(message);
 
-  // Scroll down
+  // حرك الفأرة لأسفل
   chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
-// Message submit
+// إرسال الرسالة
 chatForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Get message text
+  // احصل على نص الرسالة
   let msg = e.target.elements.msg.value;
 
   msg = msg.trim();
@@ -51,7 +51,7 @@ chatForm.addEventListener('submit', (e) => {
   e.target.elements.msg.focus();
 });
 
-// Output message to DOM
+// رسالة الإخراج إلى DOM
 function outputMessage(message) {
   const div = document.createElement('div');
   div.classList.add('message');
@@ -67,7 +67,7 @@ function outputMessage(message) {
   document.querySelector('.chat-messages').appendChild(div);
 }
 
-// Add room name to DOM
+// أضف اسم الغرفة إلى DOM
 function outputRoomName(room) {
   roomName.innerText = room;
 }
@@ -83,11 +83,11 @@ function outputUsers(users) {
   });
 }
 
-//Prompt the user before leave chat room
+//اطلب من المستخدم قبل مغادرة غرفة الدردشة
 document.getElementById('leave-btn').addEventListener('click', () => {
   const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
   if (leaveRoom) {
-    window.location = '../index.html';
+    window.location = '../index.php';
   } else {
   }
 });
