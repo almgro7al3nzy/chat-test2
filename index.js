@@ -15,25 +15,25 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-// Set public directory
+// تعيين الدليل العام
 app.use(express.static(path.join(__dirname, 'public')));
 
-// this block will run when the client connects
+// سيتم تشغيل هذه الكتلة عند اتصال العميل
 io.on('connection', socket => {
   socket.on('joinRoom', ({ username, room }) => {
     const user = newUser(socket.id, username, room);
 
     socket.join(user.room);
 
-    // General welcome
+    // ترحيب عام
     socket.emit('message', formatMessage("WebCage", 'Messages are limited to this room! '));
 
-    // Broadcast everytime users connects
+    // بث في كل مرة يتصل فيها المستخدمون
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage("WebCage", `${user.username} has joined the room`)
+        formatMessage( `${user.username} انضم إلى الغرفة`)
       );
 
     // Current active users and room name
