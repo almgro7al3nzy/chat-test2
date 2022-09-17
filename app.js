@@ -1,94 +1,112 @@
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+/**
+ * @author Joyce Hong
+ * @email soja0524@gmail.com
+ * @create date 2019-09-02 20:51:10
+ * @modify date 2019-09-02 20:51:10
+ * @desc socket.io server !
+ */
 
-const general = io.of("/general");
-const football = io.of("/football");
-const basketball = io.of("/basketball");
-var people = {};
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var generalTotalUser = 0;
-var footballTotalUser = 0;
-var basketballTotalUser = 0;
 
-general.on('connection', function (socket) {
+const socketio = require('socket.io')
+var app = express();
 
-    nickname = socket.handshake.query['nickname'];
-    people[socket.id] = nickname;
+// parse application/x-www-form-urlencoded
+// { extended: true } : support nested object
+// Returns middleware that ONLY parses url-encoded bodies and 
+// This object will contain key-value pairs, where the value can be a 
+// string or array(when extended is false), or any type (when extended is true)
+app.use(bodyParser.urlencoded({ extended: true }));
 
-    socket.on('join', function(msg){
-        footballTotalUser = generalTotalUser + 1;
-        console.log(nickname + ": has joined to general channel");
-        console.log("channel user count:" + generalTotalUser);
-        socket.broadcast.emit('join', {nickname: nickname, count: generalTotalUser});
-        socket.emit('activeUser', {count: generalTotalUser});
+//This return middleware that only parses json and only looks at requests where the Content-type
+//header matched the type option. 
+//When you use req.body -> this is using body-parser cause it is going to parse 
+// the request body to the form we want
+app.use(bodyParser.json());
+
+
+var server = app.listen(3000,()=>{
+    console.log('Server is running on port number 3000')
+})
+
+
+//Chat Server
+
+var io = socketio.listen(server)
+
+io.on('connection',function(socket) {
+
+    //The moment one of your client connected to socket.io server it will obtain socket id
+    //Let's print this out.
+    console.log(`Connection : SocketId = ${socket.id}`)
+    //Since we are going to use userName through whole socket connection, Let's make it global.   
+    var userName = '';
+    
+    socket.on('subscribe', function(data) {
+        console.log('subscribe trigged')
+        const room_data = JSON.parse(data)
+        userName = room_data.userName;
+        const roomName = room_data.roomName;
+    
+        socket.join(`${roomName}`)
+        console.log(`Username : ${userName} joined Room Name : ${roomName}`)
+        
+       
+        // Let the other user get notification that user got into the room;
+        // It can be use to indicate that person has read the messages. (Like turns "unread" into "read")
+
+        //TODO: need to chose
+        //io.to : User who has joined can get a event;
+        //socket.broadcast.to : all the users except the user who has joined will get the message
+        // socket.broadcast.to(`${roomName}`).emit('newUserToChatRoom',userName);
+        io.to(`${roomName}`).emit('newUserToChatRoom',userName);
+
+    })
+
+    socket.on('unsubscribe',function(data) {
+        console.log('unsubscribe trigged')
+        const room_data = JSON.parse(data)
+        const userName = room_data.userName;
+        const roomName = room_data.roomName;
+    
+        console.log(`Username : ${userName} leaved Room Name : ${roomName}`)
+        socket.broadcast.to(`${roomName}`).emit('userLeftChatRoom',userName)
+        socket.leave(`${roomName}`)
+    })
+
+    socket.on('newMessage',function(data) {
+        console.log('newMessage triggered')
+
+        const messageData = JSON.parse(data)
+        const messageContent = messageData.messageContent
+        const roomName = messageData.roomName
+
+        console.log(`[Room Number ${roomName}] ${userName} : ${messageContent}`)
+        // Just pass the data that has been passed from the writer socket
+
+        const chatData = {
+            userName : userName,
+            messageContent : messageContent,
+            roomName : roomName
+        }
+        socket.broadcast.to(`${roomName}`).emit('updateChat',JSON.stringify(chatData)) // Need to be parsed into Kotlin object in Kotlin
+    })
+
+    // socket.on('typing',function(roomNumber){ //Only roomNumber is needed here
+    //     console.log('typing triggered')
+    //     socket.broadcast.to(`${roomNumber}`).emit('typing')
+    // })
+
+    // socket.on('stopTyping',function(roomNumber){ //Only roomNumber is needed here
+    //     console.log('stopTyping triggered')
+    //     socket.broadcast.to(`${roomNumber}`).emit('stopTyping')
+    // })
+
+    socket.on('disconnect', function () {
+        console.log("One of sockets disconnected from our server.")
     });
+})
 
-    socket.on('disconnect', function(msg){
-        generalTotalUser = generalTotalUser - 1;
-        console.log( people[socket.id] + ": has left to general channel");
-        console.log("channel user count:" + generalTotalUser);
-        socket.broadcast.emit('left', {nickname:  people[socket.id], count: generalTotalUser});
-    });
-
-    socket.on('new_message', function(msg){
-        console.log(msg.nickname + " has send message: " + msg.message);
-        socket.broadcast.emit('new_message', {nickname: msg.nickname, message: msg.message});
-    });
-});
-
-football.on('connection', function (socket) {
-
-    nickname = socket.handshake.query['nickname'];
-    people[socket.id] = nickname;
-
-    socket.on('join', function(msg){
-        footballTotalUser = footballTotalUser + 1;
-        console.log(nickname + ": has joined to general channel");
-        console.log("channel user count:" + footballTotalUser);
-        socket.broadcast.emit('join', {nickname: nickname, count: footballTotalUser});
-        socket.emit('activeUser', {count: footballTotalUser});
-    });
-
-    socket.on('disconnect', function(msg){
-        footballTotalUser = footballTotalUser - 1;
-        console.log( people[socket.id] + ": has left to general channel");
-        console.log("channel user count:" + footballTotalUser);
-        socket.broadcast.emit('left', {nickname:  people[socket.id], count: footballTotalUser});
-    });
-
-    socket.on('new_message', function(msg){
-        console.log(msg.nickname + " has send message: " + msg.message);
-        socket.broadcast.emit('new_message', {nickname: msg.nickname, message: msg.message});
-    });
-});
-
-basketball.on('connection', function (socket) {
-
-    nickname = socket.handshake.query['nickname'];
-    people[socket.id] = nickname;
-
-    socket.on('join', function(msg){
-        basketballTotalUser = basketballTotalUser + 1;
-        console.log(nickname + ": has joined to general channel");
-        console.log("channel user count:" + basketballTotalUser);
-        socket.broadcast.emit('join', {nickname: nickname, count: basketballTotalUser});
-        socket.emit('activeUser', {count: basketballTotalUser});
-    });
-
-    socket.on('disconnect', function(msg){
-        basketballTotalUser = basketballTotalUser - 1;
-        console.log( people[socket.id] + ": has left to general channel");
-        console.log("channel user count:" + basketballTotalUser);
-        socket.broadcast.emit('left', {nickname:  people[socket.id], count: basketballTotalUser});
-    });
-
-    socket.on('new_message', function(msg){
-        console.log(msg.nickname + " has send message: " + msg.message);
-        socket.broadcast.emit('new_message', {nickname: msg.nickname, message: msg.message});
-    });
-});
-
-http.listen(3000, function () {
-    console.log('listening on *:3000');
-});
+module.exports = server; //Exporting for test
