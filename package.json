@@ -1,32 +1,21 @@
 {
-  "name": "nodebb-plugin-browsing-users",
-  "version": "2.0.4",
-  "description": "A plugin that adds the browsing users to topic API",
+  "name": "webcage",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/barisusakli/nodebb-plugin-browsing-users"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index"
   },
-  "keywords": [
-    "nodebb",
-    "plugin",
-    "browsing",
-    "users"
-  ],
-  "author": "Baris Usakli <baris@nodebb.org>",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "lru-cache": "4.1.1"
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^3.1.2"
   },
   "devDependencies": {
-    "eslint": "7.11.0",
-    "eslint-config-airbnb-base": "14.2.0",
-    "eslint-plugin-import": "2.22.1"
-  },
-  "nbbpm": {
-    "compatibility": "^1.17.0"
+    "nodemon": "^2.0.7"
   }
 }
