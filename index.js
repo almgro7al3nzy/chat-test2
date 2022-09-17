@@ -1,60 +1,74 @@
-const express = require("express");
+
+const path = require('path');
+const http = require('http');
+const express = require('express');
+const socketio = require('socket.io');
+const formatMessage = require('./helpers/formatDate')
+const {
+  getActiveUser,
+  exitRoom,
+  newUser,
+  getIndividualRoomUsers
+} = require('./helpers/userHelper');
+
 const app = express();
-const handlebars = require("express-handlebars");
-const http = require("http").Server(app);
-const io = require("socket.io")(http);
+const server = http.createServer(app);
+const io = socketio(server);
 
-// لعقد معلومات المستخدمين
-const socketsStatus = {};
+// Set public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
-// config وضبط المقاود على التعبير
-const customHandlebars = handlebars.create({ layoutsDir: "./views" });
+// this block will run when the client connects
+io.on('connection', socket => {
+  socket.on('joinRoom', ({ username, room }) => {
+    const user = newUser(socket.id, username, room);
 
-app.engine("handlebars", customHandlebars.engine);
-app.set("view engine", "handlebars");
+    socket.join(user.room);
 
- // تمكين وصول المستخدم إلى المجلد العام
-app.use("/files", express.static("public"));
+    // General welcome
+    socket.emit('message', formatMessage("WebCage", 'Messages are limited to this room! '));
 
-app.get("/home" , (req , res)=>{
-    res.render("index");
-});
+    // Broadcast everytime users connects
+    socket.broadcast
+      .to(user.room)
+      .emit(
+        'message',
+        formatMessage("WebCage", `${user.username} has joined the room`)
+      );
 
-
-io.on("connection", function (socket) {
-    const socketId = socket.id;
-    socketsStatus[socket.id] = {};
-  
-  
-    console.log("connect");
-  
-    socket.on("voice", function (data) {
-  
-      var newData = data.split(";");
-      newData[0] = "data:audio/ogg;";
-      newData = newData[0] + newData[1];
-  
-      for (const id in socketsStatus) {
-  
-        if (id != socketId && !socketsStatus[id].mute && socketsStatus[id].online)
-          socket.broadcast.to(id).emit("send", newData);
-      }
-  
+    // Current active users and room name
+    io.to(user.room).emit('roomUsers', {
+      room: user.room,
+      users: getIndividualRoomUsers(user.room)
     });
-  
-    socket.on("userInformation", function (data) {
-      socketsStatus[socketId] = data;
-  
-      io.sockets.emit("usersUpdate",socketsStatus);
-    });
-  
-  
-    socket.on("disconnect", function () {
-      delete socketsStatus[socketId];
-    });
-  
   });
 
-http.listen(3000, () => {
-  console.log("the app is run in port 3000!");
+  // Listen for client message
+  socket.on('chatMessage', msg => {
+    const user = getActiveUser(socket.id);
+
+    io.to(user.room).emit('message', formatMessage(user.username, msg));
+  });
+
+  // Runs when client disconnects
+  socket.on('disconnect', () => {
+    const user = exitRoom(socket.id);
+
+    if (user) {
+      io.to(user.room).emit(
+        'message',
+        formatMessage("WebCage", `${user.username} has left the room`)
+      );
+
+      // Current active users and room name
+      io.to(user.room).emit('roomUsers', {
+        room: user.room,
+        users: getIndividualRoomUsers(user.room)
+      });
+    }
+  });
 });
+
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
