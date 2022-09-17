@@ -3,7 +3,7 @@ const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
-// Get username and room from URL
+//احصل على اسم المستخدم والغرفة من URL
 const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
@@ -43,7 +43,7 @@ chatForm.addEventListener('submit', (e) => {
     return false;
   }
 
-  // Emit message to server
+  //إرسال رسالة إلى الخادم
   socket.emit('chatMessage', msg);
 
   // Clear input
@@ -51,7 +51,7 @@ chatForm.addEventListener('submit', (e) => {
   e.target.elements.msg.focus();
 });
 
-// Output message to DOM
+// رسالة الإخراج إلى DOM
 function outputMessage(message) {
   const div = document.createElement('div');
   div.classList.add('message');
@@ -67,12 +67,12 @@ function outputMessage(message) {
   document.querySelector('.chat-messages').appendChild(div);
 }
 
-// Add room name to DOM
+// أضف اسم الغرفة إلى DOM
 function outputRoomName(room) {
   roomName.innerText = room;
 }
 
-// Add users to DOM
+// أضف المستخدمين إلى DOM
 function outputUsers(users) {
  console.log({users})
   userList.innerHTML = '';
@@ -83,9 +83,9 @@ function outputUsers(users) {
   });
 }
 
-//Prompt the user before leave chat room
+//اطلب من المستخدم قبل مغادرة غرفة الدردشة
 document.getElementById('leave-btn').addEventListener('click', () => {
-  const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
+  const leaveRoom = confirm('هل أنت متأكد أنك تريد مغادرة غرفة الدردشة؟');
   if (leaveRoom) {
     window.location = '../index.html';
   } else {

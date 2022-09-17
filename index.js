@@ -26,7 +26,7 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // ترحيب عام
-    socket.emit('message', formatMessage("WebCage", 'Messages are limited to this room! '));
+    socket.emit('message', formatMessage("WebCage", 'الرسائل مقصورة على هذه الغرفة! '));
 
     // بث في كل مرة يتصل فيها المستخدمون
     socket.broadcast
@@ -57,7 +57,7 @@ io.on('connection', socket => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage("WebCage", `${user.username} has left the room`)
+        formatMessage("WebCage", `${user.username} غادر الغرفة`)
       );
 
       // Current active users and room name
