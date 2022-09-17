@@ -1,6 +1,6 @@
 const users = [];
 
-// Join user to chat
+// انضم إلى المستخدم للدردشة
 function newUser(id, username, room) {
   const user = { id, username, room };
 
@@ -9,12 +9,12 @@ function newUser(id, username, room) {
   return user;
 }
 
-// Get current user
+//احصل على المستخدم الحالي
 function getActiveUser(id) {
   return users.find(user => user.id === id);
 }
 
-// User leaves chat
+// يغادر المستخدم الدردشة
 function exitRoom(id) {
   const index = users.findIndex(user => user.id === id);
 
@@ -23,7 +23,7 @@ function exitRoom(id) {
   }
 }
 
-// Get room users
+// احصل على مستخدمي الغرفة
 function getIndividualRoomUsers(room) {
   return users.filter(user => user.room === room);
 }

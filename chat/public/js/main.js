@@ -12,16 +12,16 @@ console.log({username, room})
 
 const socket = io();
 
-// Join chatroom
+//انضم إلى غرف الدردشة
 socket.emit('joinRoom', { username, room });
 
-// Get room and users
+//احصل على الغرفة والمستخدمين
 socket.on('roomUsers', ({ room, users }) => {
   outputRoomName(room);
   outputUsers(users);
 });
 
-// Message from server
+// رسالة من الخادم
 socket.on('message', (message) => {
   console.log(message);
   outputMessage(message);

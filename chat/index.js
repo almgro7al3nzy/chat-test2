@@ -26,14 +26,14 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // ترحيب عام
-    socket.emit('message', formatMessage("WebCage", 'الرسائل مقصورة على هذه الغرفة! '));
+    socket.emit('message', formatMessage('الرسائل مقصورة على هذه الغرفة! '));
 
     // بث في كل مرة يتصل فيها المستخدمون
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage( `${user.username} انضم إلى الغرفة`)
+        formatMessage(`${user.username} انضم إلى الغرفة`)
       );
 
     // Current active users and room name
@@ -57,7 +57,7 @@ io.on('connection', socket => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage("WebCage", `${user.username} غادر الغرفة`)
+        formatMessage( `${user.username} غادر الغرفة`)
       );
 
       // Current active users and room name
