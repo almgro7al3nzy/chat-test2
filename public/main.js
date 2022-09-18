@@ -1,36 +1,36 @@
 $(function() {
-  const FADE_TIME = 150; // ms
-  const TYPING_TIMER_LENGTH = 400; // ms
-  const COLORS = [
+  var FADE_TIME = 150; // ms
+  var TYPING_TIMER_LENGTH = 400; // ms
+  var COLORS = [
     '#e21400', '#91580f', '#f8a700', '#f78b00',
     '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
     '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
   ];
 
   // Initialize variables
-  const $window = $(window);
-  const $usernameInput = $('.usernameInput'); // Input for username
-  const $messages = $('.messages');           // Messages area
-  const $inputMessage = $('.inputMessage');   // Input message input box
+  var $window = $(window);
+  var $usernameInput = $('.usernameInput'); // Input for username
+  var $messages = $('.messages'); // Messages area
+  var $inputMessage = $('.inputMessage'); // Input message input box
 
-  const $loginPage = $('.login.page');        // The login page
-  const $chatPage = $('.chat.page');          // The chatroom page
-
-  const socket = io();
+  var $loginPage = $('.login.page'); // The login page
+  var $chatPage = $('.chat.page'); // The chatroom page
 
   // Prompt for setting a username
-  let username;
-  let connected = false;
-  let typing = false;
-  let lastTypingTime;
-  let $currentInput = $usernameInput.focus();
+  var username;
+  var connected = false;
+  var typing = false;
+  var lastTypingTime;
+  var $currentInput = $usernameInput.focus();
+
+  var socket = io();
 
   const addParticipantsMessage = (data) => {
-    let message = '';
+    var message = '';
     if (data.numUsers === 1) {
-      message += `there's 1 participant`;
+      message += "there's 1 participant";
     } else {
-      message += `there are ${data.numUsers} participants`;
+      message += "there are " + data.numUsers + " participants";
     }
     log(message);
   }
@@ -53,41 +53,45 @@ $(function() {
 
   // Sends a chat message
   const sendMessage = () => {
-    let message = $inputMessage.val();
+    var message = $inputMessage.val();
     // Prevent markup from being injected into the message
     message = cleanInput(message);
     // if there is a non-empty message and a socket connection
     if (message && connected) {
       $inputMessage.val('');
-      addChatMessage({ username, message });
+      addChatMessage({
+        username: username,
+        message: message
+      });
       // tell server to execute 'new message' and send along one parameter
       socket.emit('new message', message);
     }
   }
 
   // Log a message
-  const log = (message, options) => {
-    const $el = $('<li>').addClass('log').text(message);
+    const log = (message, options) => {
+    var $el = $('<li>').addClass('log').text(message);
     addMessageElement($el, options);
   }
 
   // Adds the visual chat message to the message list
-  const addChatMessage = (data, options = {}) => {
+  const addChatMessage = (data, options) => {
     // Don't fade the message in if there is an 'X was typing'
-    const $typingMessages = getTypingMessages(data);
+    var $typingMessages = getTypingMessages(data);
+    options = options || {};
     if ($typingMessages.length !== 0) {
       options.fade = false;
       $typingMessages.remove();
     }
 
-    const $usernameDiv = $('<span class="username"/>')
+    var $usernameDiv = $('<span class="username"/>')
       .text(data.username)
       .css('color', getUsernameColor(data.username));
-    const $messageBodyDiv = $('<span class="messageBody">')
+    var $messageBodyDiv = $('<span class="messageBody">')
       .text(data.message);
 
-    const typingClass = data.typing ? 'typing' : '';
-    const $messageDiv = $('<li class="message"/>')
+    var typingClass = data.typing ? 'typing' : '';
+    var $messageDiv = $('<li class="message"/>')
       .data('username', data.username)
       .addClass(typingClass)
       .append($usernameDiv, $messageBodyDiv);
@@ -115,7 +119,8 @@ $(function() {
   // options.prepend - If the element should prepend
   //   all other messages (default = false)
   const addMessageElement = (el, options) => {
-    const $el = $(el);
+    var $el = $(el);
+
     // Setup default options
     if (!options) {
       options = {};
@@ -136,7 +141,6 @@ $(function() {
     } else {
       $messages.append($el);
     }
-
     $messages[0].scrollTop = $messages[0].scrollHeight;
   }
 
@@ -155,8 +159,8 @@ $(function() {
       lastTypingTime = (new Date()).getTime();
 
       setTimeout(() => {
-        const typingTimer = (new Date()).getTime();
-        const timeDiff = typingTimer - lastTypingTime;
+        var typingTimer = (new Date()).getTime();
+        var timeDiff = typingTimer - lastTypingTime;
         if (timeDiff >= TYPING_TIMER_LENGTH && typing) {
           socket.emit('stop typing');
           typing = false;
@@ -175,12 +179,12 @@ $(function() {
   // Gets the color of a username through our hash function
   const getUsernameColor = (username) => {
     // Compute hash code
-    let hash = 7;
-    for (let i = 0; i < username.length; i++) {
-      hash = username.charCodeAt(i) + (hash << 5) - hash;
+    var hash = 7;
+    for (var i = 0; i < username.length; i++) {
+       hash = username.charCodeAt(i) + (hash << 5) - hash;
     }
     // Calculate color
-    const index = Math.abs(hash % COLORS.length);
+    var index = Math.abs(hash % COLORS.length);
     return COLORS[index];
   }
 
@@ -225,7 +229,7 @@ $(function() {
   socket.on('login', (data) => {
     connected = true;
     // Display the welcome message
-    const message = 'Welcome to Socket.IO Chat – ';
+    var message = "Welcome to Socket.IO Chat – ";
     log(message, {
       prepend: true
     });
@@ -239,13 +243,13 @@ $(function() {
 
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', (data) => {
-    log(`${data.username} joined`);
+    log(data.username + ' joined');
     addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
   socket.on('user left', (data) => {
-    log(`${data.username} left`);
+    log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);
   });
@@ -264,14 +268,14 @@ $(function() {
     log('you have been disconnected');
   });
 
-  socket.io.on('reconnect', () => {
+  socket.on('reconnect', () => {
     log('you have been reconnected');
     if (username) {
       socket.emit('add user', username);
     }
   });
 
-  socket.io.on('reconnect_error', () => {
+  socket.on('reconnect_error', () => {
     log('attempt to reconnect has failed');
   });
 
