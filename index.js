@@ -1,148 +1,62 @@
-// Setup basic express server
 const express = require('express');
-const app = express();
-const path = require('path');
-const server = require('http').createServer(app);
 
-const http = require('http').createServer(app);
-const io = require('socket.io')(server);
-const port = process.env.PORT || 3000;
+var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
-server.listen(port, () => {
-  console.log('Server listening at port %d', port);
+app.set('port', (process.env.PORT || 3000));
+
+app.use(express.static(__dirname + '/public'));
+
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+//console.log(express);
+
+console.log("============== outside io ==============");
+
+var players = [];
+
+io.on('connection', function(socket){
+    console.log(socket.id, "a user connected to server!");
+    console.log(socket.rooms);
+    socket.on('connect_user', (account) => {
+        var player = {
+            //...socket,
+            id: socket.id,
+            account,
+            points: 0
+        }
+
+        players.push(player);
+
+        console.log(account.username, 'is now connected to server');
+
+        //display the players connected to server
+        console.log(players);
+
+        console.log("Connected_user: " + player.account.username);
+        //io.emit('connect_user', user);
+        socket.account = account;
+        console.log("socket.account.username: " + socket.account.username);
+        console.log("{ id: socket.id }: " + { id: socket.id } );
+        console.log("{ id: socket.id }: ", { id: socket.id } );
+        console.log("socket.id: " + socket.id);
+        console.log("socket.account: ", socket.account);
+        console.log(socket.account, " ", account)
+    });
+    socket.emit('connect_user', { id: socket.id });
+
+    socket.on('disconnect', function () {
+        //console.log("One of sockets disconnected from our server.")
+        console.log(socket.account.username, "disconnected from server.")
+    });
 });
 
-// Routing
-app.use(express.static(path.join(__dirname, 'public')));
+//console.log(socket);
 
-// Chatroom
-
-let numUsers = 0;
-
-io.on('connection', (socket) => {
-	var addedUser = false;
-	console.log('connect');
-
-	// when the client emits 'new message', this listens and executes
-	socket.on('new message', (data) => {
-		// we tell the client to execute 'new message'
-		socket.broadcast.emit('new message', {
-			username: socket.username,
-			message: data
-		});
-	});
-
-	// when the client emits 'add user', this listens and executes
-	socket.on('add user', (username) => {
-		if (addedUser) return;
-
-		// we store the username in the socket session for this client
-		socket.username = username;
-		++numUsers;
-		addedUser = true;
-		socket.emit('login', {
-			numUsers: numUsers
-		});
-		// echo globally (all clients) that a person has connected
-		socket.broadcast.emit('user joined', {
-			username: socket.username,
-			numUsers: numUsers
-		});
-	});
-
-	// when the client emits 'typing', we broadcast it to others
-	socket.on('typing', () => {
-		socket.broadcast.emit('typing', {
-			username: socket.username
-		});
-	});
-
-	// when the client emits 'stop typing', we broadcast it to others
-	socket.on('stop typing', () => {
-		socket.broadcast.emit('stop typing', {
-			username: socket.username
-		});
-	});
-
-	// when the user disconnects.. perform this
-	socket.on('disconnect', () => {
-		if (addedUser) {
-			--numUsers;
-
-			// echo globally that this client has left
-			socket.broadcast.emit('user left', {
-				username: socket.username,
-				numUsers: numUsers
-			});
-		}
-	});
-
-	socket.on('fromClient', () => {
-		socket.broadcast.emit('fromClient', {
-			username: socket.username
-		});
-		console.log('from client');
-
-	});
-
-	socket.on('clientMessage', () => {
-		socket.broadcast.emit('clientMessage',{
-		});
-		console.log('connect');
-	});
-
-
-  // when the client emits 'new message', this listens and executes
-  socket.on('new message', (data) => {
-    // we tell the client to execute 'new message'
-    socket.broadcast.emit('new message', {
-      username: socket.username,
-      message: data
-    });
-  });
-
-  // when the client emits 'add user', this listens and executes
-  socket.on('add user', (username) => {
-    if (addedUser) return;
-
-    // we store the username in the socket session for this client
-    socket.username = username;
-    ++numUsers;
-    addedUser = true;
-    socket.emit('login', {
-      numUsers: numUsers
-    });
-    // echo globally (all clients) that a person has connected
-    socket.broadcast.emit('user joined', {
-      username: socket.username,
-      numUsers: numUsers
-    });
-  });
-
-  // when the client emits 'typing', we broadcast it to others
-  socket.on('typing', () => {
-    socket.broadcast.emit('typing', {
-      username: socket.username
-    });
-  });
-
-  // when the client emits 'stop typing', we broadcast it to others
-  socket.on('stop typing', () => {
-    socket.broadcast.emit('stop typing', {
-      username: socket.username
-    });
-  });
-
-  // when the user disconnects.. perform this
-  socket.on('disconnect', () => {
-    if (addedUser) {
-      --numUsers;
-
-      // echo globally that this client has left
-      socket.broadcast.emit('user left', {
-        username: socket.username,
-        numUsers: numUsers
-      });
-    }
-  });
+server.listen(app.get('port'), function(){
+    console.log("Server is now running...");
+    console.log("Port is on", app.get('port'))
 });
