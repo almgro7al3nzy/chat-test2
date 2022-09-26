@@ -1,5 +1,10 @@
-'use strict';
+/*jslint esversion: 6*/
+/*global require, module, exports, console*/
+/*jshint -W097*/
+"use strict";
+
 module.exports = {
+    // Keys and other mathematical constants
     KEY_ESC: 27,
     KEY_ENTER: 13,
     KEY_CHAT: 13,
@@ -14,13 +19,8 @@ module.exports = {
     KEY_RIGHT_ARROW: 39,
     KEY_DOWN_ARROW: 40,
     KEY_AUTO_SPIN: 67,
-    KEY_RESET_BASIC_TANK: 80,
     KEY_AUTO_FIRE: 69,
     KEY_OVER_RIDE: 82,
-    KEY_SUICIDE: 75,
-    KEY_DOMINATOR: 72,
-    KEY_COLOR_CHANGE: 77,
-    KEY_GODMODE: 186,
     KEY_UPGRADE_ATK: 49,
     KEY_UPGRADE_HTL: 50,
     KEY_UPGRADE_SPD: 51,
@@ -43,8 +43,9 @@ module.exports = {
     KEY_CHOOSE_7: 79,
     KEY_CHOOSE_8: 76,
     KEY_LEVEL_UP: 78,
-    KEY_DEV_TANK: 191,
-    KEY_DEV_TANK_2: 111,
+    KEY_FUCK_YOU: 191,
+
+    // Canvas
     screenWidth: window.innerWidth,
     screenHeight: window.innerHeight,
     gameWidth: 0,
@@ -58,6 +59,6 @@ module.exports = {
     continuity: false,
     startPingTime: 0,
     toggleMassState: 0,
-    backgroundColor: '#F2FBFF',
-    lineColor: '#000000'
+    backgroundColor: '#f2fbff',
+    lineColor: '#000000',
 };

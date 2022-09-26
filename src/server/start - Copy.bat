@@ -1,1 +1,0 @@
-ssh -R formofgood:80:localhost:8080 serveo.net
