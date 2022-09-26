@@ -1,0 +1,212 @@
+.main.container {
+  margin-top: 4em;
+}
+
+.postMessage,
+.threadTitle {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+}
+
+.inlineSubHeader {
+  display: inline !important;
+  margin-left: 0.25em !important;
+}
+
+.imageSegment {
+  padding: 0 !important;
+  /* min-width: 250px !important; */
+}
+
+.vipFont {
+  font-family: Mona, Monapo, IPAMonaPGothic, "MS PGothic", YOzFontAA97;
+  font-size: 15px;
+}
+
+.tripcode {
+  font-weight: normal !important;
+  font-style: italic !important;
+}
+
+.username {
+  color: #b5bd68;
+}
+
+.username.sage {
+  color: #81a2be;
+}
+
+/* a quien estás citando? */
+.q {
+  color: #080;
+}
+
+.postImage {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.imageContainer {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.75em;
+  padding-bottom: 1em;
+}
+
+.yt .pvw {
+  display: none;
+}
+
+.ui.comments {
+  max-width: none !important;
+}
+
+.deleted {
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+}
+
+.footer {
+  margin-top: 3em !important;
+  padding: 1em 0 !important;
+}
+
+.playerContainer {
+  max-width: 400px;
+  padding-bottom: 0.75em;
+}
+
+.ui.attached:not(.top).header.inverted {
+  border-top: 1px solid !important;
+  border-radius: 0.28571429rem 0.28571429rem 0 0;
+}
+
+.ui.inverted.attached.header.inverted {
+  border-color: #555555 !important;
+}
+
+.ui.container.inverted {
+  background-color: #1c1c1c;
+  padding: 0.5em 1em;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .ui.container.inverted {
+    padding: 0;
+  }
+
+  .ui.ui.ui.container.main:not(.fluid) {
+    margin-left: 0.5em !important;
+    margin-right: 0.5em !important;
+  }
+
+  .ui.ui.ui.container.thread:not(.fluid) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 0.5em;
+  }
+
+  .iu.container.main {
+    margin: 0px !important;
+  }
+
+  .homeContainer {
+    margin: 0px !important;
+  }
+}
+
+.homeContainer.inverted {
+  color: #eaeaea !important;
+  background-color: #1c1c1c !important;
+}
+
+.ui.modal > .content.replyModal {
+  padding: 0 !important;
+}
+
+.postMessage hr,
+.postMessage small {
+  display: none;
+}
+
+.footer.night {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#baiLogo {
+  font-weight: 800;
+  color: transparent;
+  font-size: 150px;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 120px;
+  letter-spacing: -8px;
+}
+
+.whiLogo {
+  background: url("./logo_bg.svg");
+}
+
+.invLogo {
+  background: url("./logo_bg_inv.svg");
+}
+
+#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translatex(-50%) translatey(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.ui.items > .item > .content > .description.inverted {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ui.items > .item .meta.inverted :last-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ui.items > .item .extra.inverted {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ui.items > .item > .content > a.header.inverted {
+  color: #4183c4;
+}
+
+.ui.checkbox,
+.select {
+  margin-top: 0.5em;
+}
+
+.settingCheckbox {
+  display: block !important;
+}
+
+.spoilerCheckbox {
+  display: block !important;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.ui.divided.items > .item.inverted:first-child {
+  border-top: none;
+}
+
+.ui.divided.items > .item.inverted {
+  border-top: 1px solid rgba(49, 50, 51, 1);
+}
+
+.customTab {
+  border: none !important;
+  padding: 7px !important;
+}
