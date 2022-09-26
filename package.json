@@ -1,16 +1,34 @@
 {
-  "name": "chat",
-  "version": "1.0.0",
-  "description": "test room chat application",
+  "name": "node-js-getting-started",
+  "version": "0.3.0",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "index.js",
-  "dependencies": {
-    "express": "^4.10.2",
-    "socket.io": "^1.7.2"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node test.js"
   },
-  "author": "chetan",
-  "license": "ISC"
+  "author": "Tristan Vegas",
+  "dependencies": {
+    "eiows": "^3.6.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
