@@ -1,0 +1,14 @@
+{
+    "resourceName": "Polly",
+    "convertPolicyName": "speechGeneratorPolicy246b4310",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "convertType": "speechGenerator",
+    "language": "es-MX",
+    "voice": "Mia",
+    "access": "authAndGuest"
+}

@@ -1,0 +1,116 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-voicebot-voicebot-160649-authRole",
+      "UnauthRoleArn": "arn:aws:iam::885550607472:role/amplify-voicebot-voicebot-160649-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::885550607472:role/amplify-voicebot-voicebot-160649-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-voicebot-voicebot-160649-deployment",
+      "UnauthRoleName": "amplify-voicebot-voicebot-160649-unauthRole",
+      "StackName": "amplify-voicebot-voicebot-160649",
+      "StackId": "arn:aws:cloudformation:us-east-1:885550607472:stack/amplify-voicebot-voicebot-160649/526b6a60-353a-11ed-a01a-12aa38b05a9b",
+      "AmplifyAppId": "d1kqrybme1xltz"
+    }
+  },
+  "api": {
+    "voicebot": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "n4a76yyu4rfclbv7rycvi4fd5e",
+        "GraphQLAPIEndpointOutput": "https://arbs535vjvd5rgwnjupcborlem.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-d264mmntxjg6xktmxiiz4zbc34"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-voicebot-voicebot-160649-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apivoicebot"
+      },
+      "lastPushTimeStamp": "2022-09-18T15:13:16.557Z",
+      "lastPushDirHash": "MLljeGp/EYX1F0nUiMDLx2ymVEs="
+    }
+  },
+  "auth": {
+    "voicebotde2f84a5": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-voicebot-voicebot-160649-deployment/amplify-cfn-templates/auth/voicebotde2f84a5-cloudformation-template.json",
+        "logicalId": "authvoicebotde2f84a5"
+      },
+      "lastPushTimeStamp": "2022-09-18T15:13:16.577Z",
+      "output": {
+        "UserPoolId": "us-east-1_MjtP9UV6M",
+        "AppClientIDWeb": "7u5c7fpfjrgk4it5ipriehf0f",
+        "AppClientID": "50tcg809jicsem6ghskoo3cqhg",
+        "IdentityPoolId": "us-east-1:91280cb0-bfca-4cde-9a17-aae79ef32b58",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:885550607472:userpool/us-east-1_MjtP9UV6M",
+        "IdentityPoolName": "voicebotde2f84a5_identitypool_de2f84a5__voicebot",
+        "UserPoolName": "voicebotde2f84a5_userpool_de2f84a5"
+      },
+      "lastPushDirHash": "hcrwd1v4H5YIutqmPfnjlChm6lM="
+    }
+  },
+  "predictions": {
+    "Transcribe": {
+      "providerPlugin": "awscloudformation",
+      "service": "Transcribe",
+      "convertType": "transcription",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-voicebot-voicebot-160649-deployment/amplify-cfn-templates/predictions/Transcribe-template.json",
+        "logicalId": "predictionsTranscribe"
+      },
+      "lastPushTimeStamp": "2022-09-18T15:13:16.600Z",
+      "output": {
+        "language": "es-US",
+        "region": "us-east-1"
+      },
+      "lastPushDirHash": "X4CGPPGyREHrLFfz3GYtOFBHXUE="
+    },
+    "Polly": {
+      "providerPlugin": "awscloudformation",
+      "service": "Polly",
+      "convertType": "speechGenerator",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-voicebot-voicebot-160649-deployment/amplify-cfn-templates/predictions/Polly-template.json",
+        "logicalId": "predictionsPolly"
+      },
+      "lastPushTimeStamp": "2022-09-18T15:13:16.620Z",
+      "output": {
+        "voice": "Mia",
+        "language": "es-MX",
+        "region": "us-east-1"
+      },
+      "lastPushDirHash": "i96wjqxhR0bxhlAFSi5F36Qjvqs="
+    }
+  }
+}
