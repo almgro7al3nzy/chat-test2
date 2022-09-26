@@ -1,0 +1,63 @@
+[
+    {
+        "title": "Title of card 1",
+        "item_url": "http://zipzapme.com/special-offers",
+        "image_url": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/apple-iphone-8-plus/gold/apple-iphone8plus-gold-2-3x.jpg",
+        "subtitle": "This is URL & PHONE button type",
+        "buttons": [
+            {
+                "type": "web_url",
+                "title": "Yes, Learn More",
+                "url": "http://zipzapme.com/special-offers"
+            },
+            {
+                "type": "phone_number",
+                "title": "phone title",
+                "payload": "+380988272727"
+            }
+        ]
+    },
+    {
+        "title": "Title of card 2",
+        "item_url": "https://zakupywm1.pl/",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "subtitle": "This is POSTBACK button type",
+        "buttons": [
+            {
+                "type": "postback",
+                "title": "postback title 1.0",
+                "payload": "payload 1"
+            },            {
+                "type": "postback",
+                "title": "postback title 1.1",
+                "payload": "payload 2"
+            }
+        ]
+    },
+    {
+        "title": "Title of card 3",
+        "item_url": "http://zipzapme.com/special-offers",
+        "image_url": "https://www.att.com/shopcms/media/att/2018/shop/360s/8870319/6503B_1.jpg",
+        "subtitle": "Using an array of buttons",
+        "buttons": [
+            "Yes, Learn More",
+            "Remind Me Later",
+            "No, Thanks"
+        ]
+    },
+    {
+        "title": "Title of card 4",
+        "item_url": "https://campus.abaenglish.com",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "subtitle": "This is Account button type",
+        "buttons": [
+            {
+                "type": "account_link",
+                "url": "https://campus.abaenglish.com"
+            },
+           {
+               "type": "account_unlink"
+           }
+        ]
+    }
+]

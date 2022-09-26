@@ -1,0 +1,42 @@
+{
+  "title": "Olha Payment",
+  "coverImageUrl": "https://placeimg.com/640/480/architecture",
+  "items": [
+    {
+      "label": "Product name #1",
+      "amount": 1000
+    },
+    {
+      "label": "Product name #2",
+      "amount": 1000
+    }
+  ],
+  "total": {
+    "amount": 12000,
+    "label": "Total cost"
+  },
+  "countryCode": "US",
+  "currencyCode": "USD",
+  "shippingMethods": [
+    {
+      "label": "Fast shipping",
+      "detail": "Send with Road Runner",
+      "amount": 10000,
+      "identifier": "FAST"
+    }
+  ],
+  "requiredBillingContactFields": [
+    "postalAddress",
+    "name",
+    "phoneticName",
+    "phone",
+    "email"
+  ],
+  "requiredShippingContactFields": [
+    "postalAddress",
+    "name",
+    "phoneticName",
+    "phone",
+    "email"
+  ]
+}

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Webchat V3.0</title>
+
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+<style type="text/css">
+     html {
+            width: 25%;
+            height: 98%;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+          }
+         body {
+            height: 100%;
+         }
+         .chat-container {
+            background-color: #ffffff;
+            border: 1px solid #e5e5ea;
+           <!-- display: block;-->
+            height: 900px;
+            width: 360px;
+            border-radius: 6px;
+            box-shadow: 0 0 20px #acacac;
+        }
+        .pb-chat-popup-messages-footer > .pb-chat-popup-messages-message-box > textarea {
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px;
+        }
+
+    </style>
+	
+<link rel="stylesheet" href="https://designer-converse-qa-iad.ces.pitneycloud.com/webchat/v3/converse-chat.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://designer-converse-qa-iad.ces.pitneycloud.com/webchat/v3/converse-chat.js"></script> 
+	
+</head>
+<body>
+
+<div id="chatcontainer" class="chat-container">
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+var webClient;
+$(function(){
+	var options = {
+		host: "https://converse-qa-iad.ces.pitneycloud.com",
+		serverUserImage: "https://converse-qa-iad.ces.pitneycloud.com/public/img/pb-circle-mark.png",
+		container: "#chatcontainer",
+		showCloseButton: true,
+		//reConnectDelay: 10000,
+		//sendCallback: sTrap,
+		//receiveCallback: rTrap,
+		//hideCallback: hTrap,
+		//hideIcon: "glyphicon-remove",
+		title: "Online Chat",
+		placeholder: "Type a message...", 
+		sendButtonTitle: "Send",
+		showToolbar: true,
+		hideIcon: "fa-times",
+		allowHTML: true,
+		showBrowseButton: true
+	};
+    
+    ConverseWebClient.init(options, function (webClient) {
+    webClient.openBot("sa9299b","6eae31e9-74dc-4219-8b95-84fd3e808b95", {
+    id: "xxxxxxx", 
+    first_name: "Webchat V3.0", 
+    last_name: "Any", 
+    full_name: "Webchat V3.0", 
+    locale: "en_US"
+    });
+    
+    webClient.show();
+    webClient.sendPostBackSilent('start');
+})
+});
+</script>
+
+</html>

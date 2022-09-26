@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>V3</title>
+
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+<style type="text/css">
+        html {
+            width: 25%;
+            height: 70%;
+            margin: 0;
+            padding: 0
+        }
+
+        #chat-open {
+            background: #afafaf;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+        }
+    </style>
+        
+<link rel="stylesheet" href="https://designer-converse-qa-iad.ces.pitneycloud.com/webchat/v3/converse-chat.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://designer-converse-qa-iad.ces.pitneycloud.com/webchat/v3/converse-chat.js"></script>
+    
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Olha Samotokina</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">16;#Olha Samotokina</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+<div id="chat-wrapper" class="chat-wrapper">
+<div id="chatcontainer" class="chat-container"></div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+        var webClient;
+
+        $(function() {
+           var options = {
+                host: "https://converse-qa-iad.ces.pitneycloud.com",
+                title : "Chat With Us",
+                placeholder : "Type a message...",
+                sendButtonTitle : "Send",
+                serverUserImage: "https://converse-qa-iad.ces.pitneycloud.com/public/img/pb-circle-mark.png",
+                container : "#chatcontainer",
+                showCloseButton : false,
+                showSettingsButton: false,
+                hideIcon : "glyphicon-remove"
+            }
+
+    ConverseWebClient.init(options, function (webClient) {
+    webClient.openBot("sa9299b","31ee2f3a-d8ad-4b23-b2b8-fdbd7cf43746", {
+    id: "xxxxxxx", 
+    first_name: "v3/converse-chat", 
+    last_name: "Any", 
+    full_name: "v3/converse-chat", 
+    locale: "en_US"
+    });
+    
+    webClient.show();
+    webClient.sendPostBackSilent('start');
+})
+});
+</script>
+
+</html>

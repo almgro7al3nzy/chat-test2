@@ -1,0 +1,14 @@
+[
+    {
+        "title": "title",
+        "item_url": "https://campus.abaenglish.com",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "subtitle": "subtitle",
+        "buttons": [
+            {
+                "type": "account_link",
+                "url": "https://campus.abaenglish.com"
+            }
+        ]
+    }
+]

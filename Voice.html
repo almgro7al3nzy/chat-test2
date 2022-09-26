@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    html {
+        height: 95%;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+     }
+     body {
+        height: 100%;
+     }
+     .chat-container {
+        background-color: #ffffff;
+        border: 1px solid #e5e5ea;
+        display: block;
+        height: 85%;
+        width: 85%;
+        border-radius: 6px;
+        box-shadow: 0 0 20px #acacac;
+    }
+    .login-container {
+        height: 100%;
+        width: 96%;
+        position: absolute;
+        bottom: 0;
+
+        overflow: hidden;
+        display: none;
+    }
+    .login-open {
+        display: block;
+    }
+    .mic-icon {
+      background: #ffc0c0;
+      padding:1px;
+      border-radius: 50%;
+    }
+    .mic-icon-active {
+      animation-name: mic-icon-active-color;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes mic-icon-active-color {
+      0% {
+        background-color: #ffc0c0;
+      }
+      50% {
+        background-color: #b56262;
+      }
+      100 {
+        background-color: #ffc0c0;
+      }
+    }
+    </style>
+
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://designerui.converse.pitneybowes.com/webchat/v3.1/converse-chat.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script type="text/javascript" src="https://designerui.converse.pitneybowes.com/webchat/v3.1/converse-chat.js"></script>
+
+    <style>
+        .pb-chat-popup-messages-footer > .pb-chat-popup-messages-message-box > textarea {
+          width: calc(100% - 130px) !important;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+  var webClient;
+  var recognition;
+  var selectedVoice;
+    speak = function(text){
+      var reader = new SpeechSynthesisUtterance();
+      reader.voice = selectedVoice;
+      reader.rate = 1;
+      reader.pitch = 0;
+
+      reader.text = "";
+      if (typeof text === "string") {
+          reader.text = text;    
+      } else {
+          if (text.text) {
+              reader.text = text.text;    
+          }
+          if (text.buttons) {
+              reader.text += ". you can say. ";
+              for (i=0; i < text.buttons.length; i++) {
+                   reader.text += (i + 1 === text.quick_replies.length ? " or " :".") + text.buttons[i].title;
+              }
+          }
+          if (text.quick_replies) {
+              reader.text += ". you can say: ";
+              for (i=0; i < text.quick_replies.length; i++) {
+                   reader.text += (i + 1 === text.quick_replies.length ? ". or " :".") + text.quick_replies[i].title;
+              }
+          }
+      }
+      speechSynthesis.speak(reader);
+    }
+
+    $(function() {
+      // as the voices are not loaded imediatly we need to find the one we want after they are loaded.
+      if ('speechSynthesis' in window) {
+        speechSynthesis.onvoiceschanged = function() {
+          selectedVoice = window.speechSynthesis.getVoices()[4];
+          /**
+           * if you want to see all posible voices uncomment this and they will be sent to the console.
+           */
+            // speechSynthesis.getVoices().forEach(function(voice, index) {
+            //   console.log(index, voice);
+            // });
+        }
+      }
+      
+      // does the browser support speech recognition 
+      if (window.hasOwnProperty('webkitSpeechRecognition')) {
+          recognition = new webkitSpeechRecognition();
+          recognition.continuous = false;
+          recognition.interimResults = false;
+          recognition.lang = "en-US";
+
+          recognition.onresult = function(e) {
+            document.getElementById('status_message').value
+                             = e.results[0][0].transcript;
+            webClient.messageSend();
+            recognition.stop();
+            $("#startMic").removeClass("mic-icon-active");
+          };
+
+          recognition.onerror = function(e) {
+            recognition.stop();
+            $("#startMic").removeClass("mic-icon-active");
+          }
+      }
+
+      function receiveCallback(data) {
+          speak(data);
+      }
+
+      var options = {
+          placeholder: "Type a message or use mic ->",
+          host: "https://designer.converse.pitneybowes.com",
+          serverUserImage: "https://designerui.converse.pitneybowes.com/public/img/pb-circle-mark.png",
+          receiveCallback: receiveCallback,
+          container: "#chatcontainer",
+          showToolbar: true,
+          allowHTML: true,
+          reConnectDelay: 10000,
+          tenant: "sa3d20f",
+          botId: "90a7e123-6f8d-4969-aaee-ba8ea4b56373",
+          title : "Voice example",
+          hideIcon: "fa-times", // See: https://fontawesome.com/icons?d=gallery&m=free
+          user: {}
+      };
+
+      webClient = ConverseWebClient.init(options);
+      webClient.show();
+
+      /**
+       * The browser requires the user to do something before it will enable playback.
+       * Lets instruch the user to click the page to get started
+       */
+      webClient.text("<font style='color: red; font-weight: bold;'>To enable sound the user must do something.</font> For this example you only need to click anywhere on this page.");
+
+      if (recognition) {
+          webClient.text("To speak, click the mic icon next to the input field. <font style='color: red; font-weight: bold;'>The first time you use the mic you will be asked to allow the browser to use it.</font> As long as you are using HTTPS the selection will persist an you will not be asked every time you use it.");
+      }
+
+      webClient.text("<font style='color: red; font-weight: bold;'>Click</font> to start this bot.");
+
+      // When the page is clicked send the start postback
+      document.body.onclick = function() {
+        webClient.sendPostBackSilent("start");
+        // remove it so it will not happen twice
+        document.body.onclick = null; 
+      }
+      if (recognition) {
+          // Add the mic image next to the input field
+          $('<img id="startMic" class="mic-icon" src="https://img.icons8.com/windows/26/000000/microphone.png" />').insertAfter('#status_message');
+          $("#startMic").click(function(e) {
+              e.stopPropagation(); // stop the click from going to the body
+              startDictation();
+          })
+      }
+    });
+
+  function startDictation() {
+      try {
+         $("#startMic").addClass("mic-icon-active");
+         recognition.start();
+      } catch (e) {
+          console.log("Already started");
+      }
+  }
+</script>
+
+<body>
+
+<div id="chatcontainer" class="chat-container"></div>
+
+</body>
+</html>

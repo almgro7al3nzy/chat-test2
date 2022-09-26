@@ -1,0 +1,17 @@
+[                                                                                                                                                                                                       
+{   
+"type" : "postback",                                                                                                                                                                                                   
+"title" : "YES",                                                                                                                                                                                                       
+"payload" : "button1"                                                                                                                                                                                                       
+},                                                                                                                                                                                                       
+{ 
+"type" : "postback",                                                                                                                                                                                                       
+"title" : "NO",                                                                                                                                                                                                       
+"payload" : "button2"                                                                                                                                                                                                       
+},                                                                                                                                                                                                       
+{   
+"type" : "postback",                                                                                                                                                                                                     
+"title" : "EXIT",                                                                                                                                                                                                       
+"payload" : "button3"                                                                                                                                                                                                       
+}                                                                                                                                                                                                       
+]

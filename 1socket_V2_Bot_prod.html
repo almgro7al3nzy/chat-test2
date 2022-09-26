@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat</title>
+    <meta name="description" content="This is a demo client">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://designer.converse.pitneybowes.com/public/slick/slick.css"/>
+    <link rel="stylesheet" href="https://designer.converse.pitneybowes.com/converseChatV2.css">
+    <link rel="shortcut icon" href="images/pb_favicon.ico" type="image/x-icon" />
+    <script src="https://designer.converse.pitneybowes.com/converseChatV2.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script type="text/javascript" src="https://designer.converse.pitneybowes.com/public/slick/slick.min.js"></script>
+    <style>
+       .chat-container {
+            background-color: #ffffff;
+            border: 1px solid #b0b0b0;
+            height: 500px;
+            width: 360px;
+        }
+    </style>
+  </head>
+
+
+<body>
+    <div id="chatcontainer" class="chat-container"></div>
+    <script type="text/javascript">
+        var newChat;
+
+        $(function() {
+            var options = {
+                host: "https://designer.converse.pitneybowes.com",
+                title : "Chat With Us",
+                placeholder : "Type a message...",
+                sendButtonTitle : "Send",
+                serverUserImage: "https://designer.converse.pitneybowes.com/public/img/pb-circle-mark.png",
+                container : "#chatcontainer",
+                showCloseButton : false,
+                showSettingsButton: false,
+                showToolbar : true,
+                hideIcon : "glyphicon-remove"
+            }
+
+            newChat = new converseChat(options);
+            newChat.init(function() {
+                newChat.openBot("sa3d20f", "98233dc7-3ee4-4dd4-a4e4-878c974bede6", {
+                    id : "TT00001",
+                    first_name : "Friend",
+                    last_name : "Any",
+                    full_name : "Customer Any",
+                    locale : "en_US"
+                });
+            });
+
+            newChat.show();
+            setTimeout(function() {
+                newChat.sendPostBackSilent('start');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

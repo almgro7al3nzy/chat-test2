@@ -1,0 +1,240 @@
+{
+  "bot": {
+    "conversations": [
+      {
+        "type": "question",
+        "left": 154,
+        "top": 335,
+        "w": 120,
+        "h": 40,
+        "name": "Learn more?",
+        "id": "ce65c3a0-23d6-11e9-91dc-5bd0e4306c1a",
+        "answers": {
+          "responses": [
+            {
+              "id": "085a0990-23d7-11e9-91dc-5bd0e4306c1a",
+              "type": "answer",
+              "parent": "ce65c3a0-23d6-11e9-91dc-5bd0e4306c1a",
+              "display": "Get a brochure",
+              "name": "",
+              "left": 250,
+              "top": 627,
+              "h": 41.864768683274065,
+              "w": 180.58362989323842,
+              "next": "ac2649f0-2925-11e9-b5d9-6f7112681390"
+            },
+            {
+              "id": "1adbbd20-23d7-11e9-91dc-5bd0e4306c1a",
+              "type": "answer",
+              "parent": "ce65c3a0-23d6-11e9-91dc-5bd0e4306c1a",
+              "display": "Talk to a rep",
+              "name": "",
+              "left": 366,
+              "top": 502,
+              "h": 38.66192170818505,
+              "w": 199.80071174377224,
+              "next": "ac2649f0-2925-11e9-b5d9-6f7112681390"
+            },
+            {
+              "id": "267a97a0-23d7-11e9-91dc-5bd0e4306c1a",
+              "type": "answer",
+              "parent": "ce65c3a0-23d6-11e9-91dc-5bd0e4306c1a",
+              "display": "Visit showroom",
+              "name": "",
+              "left": 381,
+              "top": 343,
+              "h": 38.66192170818505,
+              "w": 192.32740213523135,
+              "next": "ac2649f0-2925-11e9-b5d9-6f7112681390"
+            },
+            {
+              "id": "1bbfabc0-260c-11e9-9e38-3bdd46e0fcf5",
+              "type": "answer",
+              "parent": "ce65c3a0-23d6-11e9-91dc-5bd0e4306c1a",
+              "display": "Order online",
+              "name": "",
+              "left": 376,
+              "top": 282,
+              "h": 40,
+              "w": 120,
+              "next": "ac2649f0-2925-11e9-b5d9-6f7112681390"
+            }
+          ],
+          "uiType": "quick_replies"
+        },
+        "intention_id": null,
+        "text": "Do you want more information about our {system.toProperCase(product2)} range?",
+        "variableName": "",
+        "valueFormat": "CUSTOM"
+      },
+      {
+        "type": "message",
+        "left": -12,
+        "top": 56,
+        "w": 194.4626334519573,
+        "h": 37.594306049822066,
+        "name": "Current Products",
+        "id": "b1ba4200-23d9-11e9-91dc-5bd0e4306c1a",
+        "buttons": [],
+        "buttonUiType": "button",
+        "intention_id": "41725cc8-f1a1-44ea-bfe4-999516393d21",
+        "text": "Thanks for your interest...",
+        "next": "9ff41620-2561-11e9-b0cb-415bd2aa1b7f"
+      },
+      {
+        "type": "message",
+        "left": 590,
+        "top": 152,
+        "w": 285.3274021352314,
+        "h": 39.13523131672598,
+        "name": "Discontinued",
+        "id": "6b9d5720-23e4-11e9-91dc-5bd0e4306c1a",
+        "buttons": [],
+        "buttonUiType": "button",
+        "intention_id": "85809cd2-83cc-47bd-b1c9-726d1d1a26ac",
+        "text": "Unfortunately the {system.toProperCase(oldproduct2)} range is discontinued.",
+        "next": "ac2649f0-2925-11e9-b5d9-6f7112681390"
+      },
+      {
+        "type": "action",
+        "left": 39,
+        "top": 168,
+        "w": 120,
+        "h": 40,
+        "name": "Old Product?",
+        "id": "9ff41620-2561-11e9-b0cb-415bd2aa1b7f",
+        "action_type": "conditional",
+        "zendesk": {},
+        "next": "ce65c3a0-23d6-11e9-91dc-5bd0e4306c1a",
+        "conditions": [
+          {
+            "id": "bf3c0d30-2561-11e9-b0cb-415bd2aa1b7f",
+            "varname": "{oldproduct2}",
+            "operator": "=",
+            "value": "pearl",
+            "next": "6b9d5720-23e4-11e9-91dc-5bd0e4306c1a",
+            "left": 405,
+            "top": 120,
+            "w": 120,
+            "h": 40
+          },
+          {
+            "id": "d260b780-2561-11e9-b0cb-415bd2aa1b7f",
+            "varname": "{oldproduct2}",
+            "operator": "=",
+            "value": "dolphin",
+            "next": "6b9d5720-23e4-11e9-91dc-5bd0e4306c1a",
+            "left": 404,
+            "top": 182,
+            "w": 120,
+            "h": 40
+          }
+        ],
+        "set_value": "dW5kZWZpbmVk"
+      },
+      {
+        "type": "action",
+        "left": 900,
+        "top": 403,
+        "w": 180,
+        "h": 36,
+        "name": "Clear product names",
+        "id": "ac2649f0-2925-11e9-b5d9-6f7112681390",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5wcm9kdWN0MiA9ICIiOwpjb250ZXh0Lm9sZHByb2R1Y3QyID0gIiI7",
+        "next": null,
+        "intention_id": null,
+        "delay": null
+      }
+    ],
+    "defaultReply": {
+      "text": "Sorry I don't understand that...",
+      "type": "message",
+      "next": null
+    },
+    "quickReplies": [],
+    "pbSms": {},
+    "name": "Product-Enquiry-Test",
+    "createdBy": "Demo Admin",
+    "createdDate": "February 05 2019 04:19:34 pm",
+    "lastModifiedBy": "Demo Admin",
+    "lastModifiedDate": "February 05 2019 05:03:35 pm",
+    "cancel": "cancel, quit, stop",
+    "aiLang": "en",
+    "id": "d341c460-2961-11e9-b443-c54ce05c90c6"
+  },
+  "intentions": [
+    {
+      "name": "Products2",
+      "utterances": [
+        {
+          "id": "ee524490-2967-11e9-8a44-974280d0d008",
+          "text": "can I buy [merino](product2) online today",
+          "aiLang": "en"
+        },
+        {
+          "id": "f3209580-2967-11e9-8a44-974280d0d008",
+          "text": "can I get your [merino](product2)",
+          "aiLang": "en"
+        },
+        {
+          "id": "90036530-2968-11e9-8a44-974280d0d008",
+          "text": "can I order [merino](product2)",
+          "aiLang": "en"
+        },
+        {
+          "id": "97cca6a0-2968-11e9-8a44-974280d0d008",
+          "text": "can I place an order for [merino](product2) now",
+          "aiLang": "en"
+        },
+        {
+          "id": "c4d5e300-2968-11e9-8a44-974280d0d008",
+          "text": "can i buy [granite](product2) online today",
+          "aiLang": "en"
+        },
+        {
+          "id": "cdb57670-2968-11e9-8a44-974280d0d008",
+          "text": "can i get your [granite](product2)",
+          "aiLang": "en"
+        },
+        {
+          "id": "dff454a0-2968-11e9-8a44-974280d0d008",
+          "text": "can i order [granite](product2) here",
+          "aiLang": "en"
+        },
+        {
+          "id": "ebca1da0-2968-11e9-8a44-974280d0d008",
+          "text": "can i place an order for [granite](product2)",
+          "aiLang": "en"
+        },
+        {
+          "id": "3b37ac40-2969-11e9-8a44-974280d0d008",
+          "text": "is everything available online",
+          "aiLang": "en"
+        },
+        {
+          "id": "434a2bb0-2969-11e9-8a44-974280d0d008",
+          "text": "is the full range available in store",
+          "aiLang": "en"
+        },
+        {
+          "id": "4b005a50-2969-11e9-8a44-974280d0d008",
+          "text": "how quickly do you deliver",
+          "aiLang": "en"
+        },
+        {
+          "id": "528f2ad0-2969-11e9-8a44-974280d0d008",
+          "text": "what is the delivery time on your products",
+          "aiLang": "en"
+        },
+        {
+          "id": "6b91c150-2969-11e9-8a44-974280d0d008",
+          "text": "can i order [granite](product2)",
+          "aiLang": "en"
+        }
+      ],
+      "id": "41725cc8-f1a1-44ea-bfe4-999516393d21"
+    }
+  ]
+}

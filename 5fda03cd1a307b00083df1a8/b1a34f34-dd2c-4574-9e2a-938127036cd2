@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EngageOne Communicate Video Player</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <base href="/">
+  <link rel="icon" type="image/png" href="https://player.engageone.video/rc/1.0.15/assets/img/favicon.ico" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://player.engageone.video/rc/1.0.15/styles.27ab2eb40f9e7df1.css"><script nonce="v3sdolu0s7">var stageName = "dev"; var videoPlayerVersion = "rc/1.0.15";</script></head>
+<body>
+  <app-eocv-router></app-eocv-router>
+<script src="https://player.engageone.video/rc/1.0.15/runtime.76f45db4b7a048e9.js" type="module"></script><script src="https://player.engageone.video/rc/1.0.15/polyfills.9fd47c457babb3af.js" type="module"></script><script src="https://player.engageone.video/rc/1.0.15/main.f9f8dc2bb4d188d3.js" type="module"></script></body>
+</html>

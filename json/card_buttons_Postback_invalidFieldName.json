@@ -1,0 +1,15 @@
+[
+    {
+        "title1": "title",
+        "item_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpgl",
+        "subtitle": "subtitle",
+        "buttons1": [
+            {
+                "type1": "postback",
+                "title1": "postback title",
+                "payload": "payload"
+            }
+        ]
+    }
+]

@@ -1,0 +1,49 @@
+{
+  "title": "Your order from the Widget Store",
+  "subtitle": "Not currently used",
+  "coverImageUrl": "https://placeimg.com/640/480/store",
+  "items": [
+    {
+      "label": "Large Widgets (Pack of 50)",
+      "amount": 28500
+    },
+    {
+      "label": "Small Widgets (Pack of 1000)",
+      "amount": 8000
+    }
+  ],
+  "total": {
+    "amount": 43500,
+    "label": "Total cost"
+  },
+  "countryCode": "US",
+  "currencyCode": "USD",
+  "shippingMethods": [
+    {
+      "label": "Free shipping",
+      "detail": "Expected delivery: Tuesday 11th",
+      "amount": 0,
+      "identifier": "FREE"
+    },
+    {
+      "label": "Fast shipping",
+      "detail": "Tomorrow before 1pm",
+      "amount": 7000,
+      "identifier": "FAST"
+    }
+  ],
+  "requiredBillingContactFields": [
+    "postalAddress",
+    "name",
+    "phoneticName",
+    "phone",
+    "email"
+  ],
+  "requiredShippingContactFields": [
+    "postalAddress",
+    "name",
+    "phoneticName",
+    "phone",
+    "email"
+  ]
+}

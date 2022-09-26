@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://converse-qa-iad.ces.pitneycloud.com/public/slick/slick.css" />
+    <link rel="stylesheet" href="https://converse-qa-iad.ces.pitneycloud.com/converseChatV2.css" />
+    <style type="text/css">
+        #chatbot {
+            max-height: 500px;
+            height: 500px;
+            width: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Chat Bot Test</h1>
+        <p>There is a chat bot on this page. </p>
+        <div id="chat-wrapper" class="chat-wrapper">
+            <div id="chatbot" class="chat-container"></div>
+        </div>
+    </div>
+    <!--<script src="https://code.jquery.com/jquery-latest.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>-->
+    <script src="https://converse-qa-iad.ces.pitneycloud.com/converseChatV2.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var options = {
+                host: "https://converse-qa-iad.ces.pitneycloud.com",
+                container: "#chatbot",
+                showCloseButton: true,
+                title: "This is my chatbot.",
+                placeholder: "Enter text here...",
+                sendButtonTitle: "Send",
+                serverUserImage: "https://converse-qa-iad.ces.pitneycloud.com/public/img/pb-circle-mark.png"
+            };
+            var newChat = new converseChat(options);
+            newChat.openBot("sa9299b","eb407a81-c00e-4162-8223-8f67dbe86bef", {id: "xxxxxxx", first_name: "Customer", last_name: "Any", full_name: "Customer Full Name Test", locale: "en_US"});
+            newChat.init();
+            newChat.sendPostBackSilent('start');
+        });
+    </script>
+</body>
+</html>

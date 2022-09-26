@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        html {
+            height: 98%;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+        }
+        body {
+            height: 100%;
+        }
+        .chat-container {
+            background-color: #ffffff;
+            border: 1px solid #e5e5ea;
+            display: block;
+            height: 85%;
+            width: 85%;
+            border-radius: 6px;
+            box-shadow: 0 0 20px #acacac;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://webchat-converse-qa-iad.ces.pitneycloud.com/css/converse-chat.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script src="https://webchat-converse-qa-iad.ces.pitneycloud.com/js/converse-chat.js"></script>
+</head>
+<script type="text/javascript">
+ $(function() {
+		var options = {
+			placeholder: "Type a message...",
+			host:  "https://webchat-converse-qa-iad.ces.pitneycloud.com",
+            converseHost: "https://converse-qa-iad.ces.pitneycloud.com",
+            serverUserImage: "https://medias3.prestastore.com/835054-pbig/chat-bot-for-social-networking.jpg",
+            clientUserImage: "http://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/User-Chat-icon.png",
+			container: "#chatcontainer1",
+			showToolbar: true,
+			reConnectDelay: 10000,
+			tenant: "sa9299b",
+			botId: "31ee2f3a-d8ad-4b23-b2b8-fdbd7cf43746",
+			title : "Welcome 😀",
+			hideIcon: "fa-times",
+			startPhrase: "time picker",
+			user: {
+				id: "TT00001",
+				first_name: "Olha",
+				last_name: "Samotokina",
+				full_name: "Olha S."
+			}
+		};
+
+		var webClient = ConverseWebClient.init(options);
+		webClient.show();
+	});
+</script>
+
+<script type="text/javascript">
+ $(function() {
+		var options = {
+			placeholder: "Type a message...",
+			host:  "https://webchat-converse-qa-iad.ces.pitneycloud.com",
+            converseHost: "https://converse-qa-iad.ces.pitneycloud.com",
+            serverUserImage: "https://medias3.prestastore.com/835054-pbig/chat-bot-for-social-networking.jpg",
+            clientUserImage: "http://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/User-Chat-icon.png",
+			container: "#chat-container",
+			showToolbar: true,
+			reConnectDelay: 10000,
+			tenant: "sa9299b",
+			botId: "17e5c573-ab8e-4521-831c-ed2c091009c0",
+			title : "Welcome",
+			hideIcon: "fa-times",
+			startPhrase: "time picker",
+			user: {
+				id: "TT00001",
+				first_name: "Olha",
+				last_name: "Samotokina",
+				full_name: "Olha S."
+			}
+		};
+
+		var webClient = ConverseWebClient.init(options);
+		webClient.show();
+	});
+</script>
+
+<body>
+
+<b>Chat #1</b>
+<div id="chatcontainer1" class="chat-container"></div>
+
+<b>Chat #2</b>
+<div id="chat-container" class="chat-container"></div>
+
+</body>
+
+</html>

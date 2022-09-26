@@ -1,0 +1,28 @@
+[
+    {
+        "title": "title 1",
+        "item_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "subtitle": "subtitle",
+        "buttons": [
+            {
+                "type": "postback",
+                "title": "postback title",
+                "payload": "payload"
+            }
+        ]
+    },
+    {
+        "title": "title 2",
+        "item_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "subtitle": "subtitle",
+        "buttons": [
+            {
+                "type": "postback",
+                "title": "postback title",
+                "payload": "payload"
+            }
+        ]
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "title": "title",
+        "item_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "subtitle": "subtitle",
+        "buttons": [
+            {
+                "type": "web_url",
+                "title": "web title",
+                "url": "http://www.pb.com"
+            }
+        ]
+    }
+]

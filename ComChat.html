@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EngageOne&reg; Converse Web Chat Client Example</title>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    </head>
+    <body>
+        <div id="chatcontainer" class="chat-container"></div>
+        <script src="https://webclient.qa.engageonechat.com/loader.min.js"></script>
+        <script>converseChatLoader({
+            host: "wss://chatws.qa.us-east-1.engageonechat.com",
+            converseHost: "https://chatrunner.qa.us-east-1.engageonechat.com",
+            serverUserImage: "https://webclient.qa.engageonechat.com/eo-square-mark.png",
+            tenant: "sa35d4d",
+            botId: "Chat,0308",
+            placeholder: "Type a message...",
+            chatBotBaseUrl: "https://webclient.qa.engageonechat.com"
+        });</script>
+    </body>
+</html>
+

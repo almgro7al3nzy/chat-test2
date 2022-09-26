@@ -1,0 +1,26 @@
+[                                                                                                                                                                                                       
+{
+  "content_type":"text",
+  "title":"Button 1",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png",
+  "payload":"payload 1"
+},
+{
+  "content_type":"text",
+  "title":"Button 2",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png",
+  "payload":"payload 2"
+},
+{
+  "content_type":"text",
+  "title":"Button 3",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png",
+  "payload":"payload 3"
+},
+{
+  "content_type":"text",
+  "title":"Button 4",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png",
+  "payload":"payload 4"
+}
+]

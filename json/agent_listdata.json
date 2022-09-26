@@ -1,0 +1,69 @@
+{
+	"data": [{
+			"title": "This is Title one. ",
+			"item_url": "http://zipzapme.com/special-offers",
+			"image_url": "http://zipzapme.com/wp-content/uploads/2016/11/demo-promo-iphone-700x300.jpg",
+			"subtitle": "Would you like to hear more?",
+			"buttons": [
+				"Yes, Learn More",
+				"Remind Me Later",
+				"No Thanks"
+			]
+		},
+		{
+			"title": "This is title 2 and is a really really realllllllllllllllllly long title.",
+			"item_url": "http://zipzapme.com/special-offers",
+			"image_url": "http://zipzapme.com/wp-content/uploads/2016/11/demo-promo-iphone-700x300.jpg",
+			"subtitle": "Would you like to hear more?",
+			"buttons": [{
+				"type": "web_url",
+				"title": "Yes, Learn More",
+				"url": "http://zipzapme.com/special-offers"
+			}]
+		},
+		{
+			"title": "title 4 no sub title",
+			"item_url": "http://zipzapme.com/special-offers",
+			"image_url": "http://zipzapme.com/wp-content/uploads/2016/11/demo-promo-iphone-700x300.jpg",
+			"subtitle": "",
+			"buttons": [{
+				"type": "web_url",
+				"title": "Yes, Learn More",
+				"url": "http://zipzapme.com/special-offers"
+			}]
+		},
+		{
+			"title": " no image url !£$%^&*()_+}{POIUYTREWQASDFGHJKL:@~ZXCVBNM<>?¬1234567890-=][#;l..,",
+			"item_url": "http://zipzapme.com/special-offers",
+			"image_url": "",
+			"subtitle": "Would you like to hear more?",
+			"buttons": [{
+				"type": "web_url",
+				"title": "Yes, Learn More",
+				"url": "http://zipzapme.com/special-offers"
+			}]
+		},
+		{
+			"title": "Title 6 no item url",
+			"item_url": "",
+			"image_url": "http://zipzapme.com/wp-content/uploads/2016/11/demo-promo-iphone-700x300.jpg",
+			"subtitle": "Would you like to hear more?",
+			"buttons": [{
+				"type": "web_url",
+				"title": "Yes, Learn More",
+				"url": "http://zipzapme.com/special-offers"
+			}]
+		},
+		{
+			"title": "Title 6 blah",
+			"item_url": "http://zipzapme.com/special-offers",
+			"image_url": "http://zipzapme.com/wp-content/uploads/2016/11/demo-promo-iphone-700x300.jpg",
+			"subtitle": "Would you like to hear more?",
+			"buttons": [{
+				"type": "web_url",
+				"title": "Yes, Learn More",
+				"url": "http://zipzapme.com/special-offers"
+			}]
+		}
+	]
+}

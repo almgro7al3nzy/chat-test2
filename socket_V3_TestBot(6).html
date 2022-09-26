@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Q&A</title>
+
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+<style type="text/css">
+        html {
+            width: 25%;
+            height: 70%;
+            margin: 0;
+            padding: 0
+        }
+
+        #chat-open {
+            background: #afafaf;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+        }
+    </style>
+
+<link rel="stylesheet" href="https://converse-qa-iad.ces.pitneycloud.com/webchat/v3/converse-chat.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://converse-qa-iad.ces.pitneycloud.com/webchat/v3/converse-chat.js"></script>
+    
+ 
+</head>
+<body>
+
+<div id="chat-wrapper" class="chat-wrapper">
+<div id="chatcontainer" class="chat-container"></div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+var webClient;
+$(function(){
+	var options = {
+		host: "https://converse-qa-iad.ces.pitneycloud.com",
+		serverUserImage: "https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png",
+		container: "#chatcontainer",
+		showCloseButton: true,
+		reConnectDelay: 10000,
+		//sendCallback: sTrap,
+		//receiveCallback: rTrap,
+		//hideCallback: hTrap,
+		title: "Online Chat",
+		placeholder: "Type a message...", 
+		sendButtonTitle: "send",
+		hideIcon: "glyphicon-remove"
+	};
+    
+    ConverseWebClient.init(options, function (webClient) {
+    webClient.openBot("sa9299b","46ae6892-acc5-41c9-9c57-2d6886836d92", {
+    id: "xxxxxxx", 
+    first_name: "Customer Test", 
+    last_name: "Any", 
+    full_name: "Customer Full Name Test", 
+    locale: "en_US"
+    });
+    
+    webClient.show();
+    webClient.sendPostBackSilent('start');
+})
+});
+</script>
+
+</html>

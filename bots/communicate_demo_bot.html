@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EngageOne&reg; Converse Web Chat Client Example</title>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'self' blob: https://*.converse.engageone.co/ https://*.us-east-1.converse.engageone.co/; img-src 'self' data: http: https:; style-src 'self' 'unsafe-inline' https://*.converse.engageone.co/ https://*.us-east-1.converse.engageone.co/ https://fonts.googleapis.com/; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.converse.engageone.co/ https://*.us-east-1.converse.engageone.co/; font-src 'self' https://*.converse.engageone.co/ https://*.us-east-1.converse.engageone.co/ https://fonts.gstatic.com/; connect-src 'self' https://*.converse.engageone.co/ https://*.us-east-1.converse.engageone.co/ https://*.s3.amazonaws.com/ blob: https://*.converse.engageone.co/ https://*.us-east-1.converse.engageone.co/ wss://*.converse.engageone.co/ wss://*.us-east-1.converse.engageone.co/; frame-src 'self' http: https: blob:; media-src 'self'; base-uri 'self'; form-action 'self'"/>
+    </head>
+    <body>
+        <div id="chatcontainer" class="chat-container"></div>
+        <script src="https://webclient.converse.engageone.co/loader.min.js"></script>
+        <script>converseChatLoader({
+            host: "wss://chatws.us-east-1.converse.engageone.co",
+            converseHost: "https://chatrunner.us-east-1.converse.engageone.co",
+            serverUserImage: "https://media.istockphoto.com/vectors/-vector-id1010001882?k=20&m=1010001882&s=612x612&w=0&h=6ZqzWlYBD3bT2EqJolzC3xbIKVVy350qMQmmS6B-Wd4=",
+            tenant: "sa460f6",
+            botId: "GreenField,ChatDemo1",
+			title: "This is my chatbot",
+            placeholder: "Start a conversation...",
+            chatBotBaseUrl: "https://webclient.converse.engageone.co"
+        });</script>
+    </body>
+</html>

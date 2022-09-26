@@ -1,0 +1,1900 @@
+{
+  "bot": {
+    "conversations": [
+      {
+        "type": "message",
+        "left": 249,
+        "top": -104,
+        "w": 120,
+        "h": 40,
+        "name": "Hello",
+        "id": "b6dc86a0-4baa-11e9-9524-13ee9afcbbeb",
+        "buttons": [],
+        "buttonUiType": "button",
+        "when": "hi",
+        "text": "Good Morning",
+        "intention_id": null,
+        "requireslink": false,
+        "next": "ac9640d0-4bb6-11e9-ba10-87f7a3cfcc62",
+        "delay": 2,
+        "d_left": 399,
+        "d_top": -34
+      },
+      {
+        "type": "message",
+        "left": 236,
+        "top": -28,
+        "w": 168,
+        "h": 48,
+        "name": "Simple message",
+        "id": "ac9640d0-4bb6-11e9-ba10-87f7a3cfcc62",
+        "buttons": [],
+        "buttonUiType": "card",
+        "intention_id": null,
+        "text": "Hi 😀 Have a look around! Let us know if you have any questions.",
+        "when": "Maybe, Yes, Yes Learn More, payload, postback title 2",
+        "textVariations": []
+      },
+      {
+        "type": "card",
+        "left": 423,
+        "top": 57,
+        "w": 120,
+        "h": 40,
+        "name": "List Picker_1",
+        "id": "1816dd70-4bbb-11e9-aea3-41b08f354dc3",
+        "items": [],
+        "when": "list picker",
+        "text": "Service Options",
+        "action": "7b0edd10-4bbb-11e9-aea3-41b08f354dc3",
+        "listVariableName": "mycard",
+        "multiSectionListPicker": false,
+        "cards": [],
+        "getCardsByAction": true
+      },
+      {
+        "type": "action",
+        "left": 813,
+        "top": -20,
+        "w": 120,
+        "h": 40,
+        "name": "SET list 1",
+        "id": "7b0edd10-4bbb-11e9-aea3-41b08f354dc3",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5teWNhcmQgPSAKWwogICAgewogICAgICAgICAgICAgICAgInRpdGxlIjogIk5hdHVyZSIsCiAgICAgICAgICAgICAgICAic3VidGl0bGUiOiAic3VidGl0bGUgb2YgY2FyZCAxIiwKICAgICAgICAgICAgICAgICJpdGVtX3VybCI6ICJodHRwczovL3d3dy5uYXR1cmUuY29tL2FydGljbGVzL2Q0MTU4Ni0wMTktMDEwNjItNCIsCiAgICAgICAgICAgICAgICAiaW1hZ2VfdXJsIjoiaHR0cHM6Ly93d3cueWVzbWFnYXppbmUub3JnL2hhcHBpbmVzcy93aGF0LWhhcHBlbnMtd2hlbi13ZS1yZWNvbm5lY3Qtd2l0aC1uYXR1cmUvbmF0dXJlMS5wbmcvaW1hZ2UiLAogICAgICAgICAgICAgICAgImJ1dHRvbnMiOiBbIAogICAgICAgICAgICAgICAgIHsidHlwZSI6InBvc3RiYWNrIiwgInRpdGxlIjoiWWVzIiwgInBheWxvYWQiOiJZZXMifSwKICAgICAgICAgICAgICAgICB7InR5cGUiOiJwb3N0YmFjayIsICJ0aXRsZSI6Ik5vIiwgInBheWxvYWQiOiJObyJ9CiAgICAgICAgXQogICAgfSwKICAgIHsKICAgICAgICAgICAgICAgICJ0aXRsZSI6ICJUZWNobm9sb2d5IiwKICAgICAgICAgICAgICAgICJzdWJ0aXRsZSI6ICJzdWJ0aXRsZSBvZiBjYXJkIDIiLAogICAgICAgICAgICAgICAgIml0ZW1fdXJsIjogImh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy9hdi93b3JsZC11cy1jYW5hZGEtNDc3Nzg1MjIvaG93LXRoaXMtYm95LXMtZnVubnktZmFjZXMtbWFkZS1oaW0tYS1jaGluYS1zdGFyIiwKICAgICAgICAgICAgICAgImltYWdlX3VybCI6Imh0dHBzOi8vZW5jcnlwdGVkLXRibjAuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1JxdHI0ZWZjaWhWWDFjM2FqRUJ3NW93eXNxaDZmVy1ZYlhOTFFUbXE2ejAwcXRWUi1jIiwKICAgICAgICAgICAgICAgICJidXR0b25zIjogWyAKICAgICAgICAgICAgICAgICB7InR5cGUiOiJwb3N0YmFjayIsICJ0aXRsZSI6IkFncmVlIiwgInBheWxvYWQiOiJBZ3JlZSJ9LAogICAgICAgICAgICAgICAgIHsidHlwZSI6InBvc3RiYWNrIiwgInRpdGxlIjoiUG9zdHBvbmUiLCAicGF5bG9hZCI6IlBvc3Rwb25lIn0sCiAgICAgICAgICAgICAgICAgeyJ0eXBlIjoicG9zdGJhY2siLCAidGl0bGUiOiJPSyIsICJwYXlsb2FkIjoiT0sifQogICAgICAgIF0KICAgIH0sCnsKICAgICAgICAgICAgICAgICJ0aXRsZSI6ICJMZXZlbCIsCiAgICAgICAgICAgICAgICAic3VidGl0bGUiOiAic3VidGl0bGUgb2YgY2FyZCAzIiwKICAgICAgICAgICAgICAgICJpdGVtX3VybCI6ICJodHRwczovL3d3dy5mbHlsZXZlbC5jb20vIiwKICAgICAgICAgICAgICAgICJpbWFnZV91cmwiOiJodHRwczovL3N0YXRpYy5mbHlsZXZlbC5jb20vbGV2ZWwtbG9nby0xMjAweDYzMC5wbmc/Mzg5NzEiLAogICAgICAgICAgICAgICAgImJ1dHRvbnMiOiBbIAogICAgICAgICAgICAgICAgIHsidHlwZSI6InBvc3RiYWNrIiwgInRpdGxlIjoiMSIsICJwYXlsb2FkIjoiMSJ9LAogICAgICAgICAgICAgICAgIHsidHlwZSI6InBvc3RiYWNrIiwgInRpdGxlIjoiMiIsICJwYXlsb2FkIjoiMiJ9LAogICAgICAgICAgICAgICAgIHsidHlwZSI6InBvc3RiYWNrIiwgInRpdGxlIjoiMyIsICJwYXlsb2FkIjoiMyJ9CiAgICAgICAgXQogICAgfSwKICAgIHsKICAgICAgICAidGl0bGUiOiAiWW91IGFyZSBlbGlnaWJsZSBmb3IgYW4gdXBncmFkZSB0byB0aGUgaVBob25lIDciLAogICAgICAgICJpdGVtX3VybCI6ICJodHRwOi8vemlwemFwbWUuY29tL3NwZWNpYWwtb2ZmZXJzIiwKICAgICAgICAiaW1hZ2VfdXJsIjogImh0dHA6Ly96aXB6YXBtZS5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMTYvMTEvZGVtby1wcm9tby1pcGhvbmUtNzAweDMwMC5qcGciLAogICAgICAgICJzdWJ0aXRsZSI6ICJXb3VsZCB5b3UgbGlrZSB0byBoZWFyIG1vcmU/IiwKICAgICAgICAiYnV0dG9ucyI6IFsKICAgICAgICAgICAgIlllcyBMZWFybiBNb3JlIiwKICAgICAgICAgICAgIlJlbWluZCBNZSBMYXRlciIsCiAgICAgICAgICAgICJObyBUaGFua3MiCiAgICAgICAgXQogICAgfQpd"
+      },
+      {
+        "type": "action",
+        "left": 821,
+        "top": 76,
+        "w": 120,
+        "h": 40,
+        "name": "REST list",
+        "id": "0fddaad0-4c79-11e9-bbfa-3d7c51feb38b",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "endpoint": "https://OlsaUser.github.io/json/card_buttons.json",
+        "method": "GET",
+        "variableName": "mycard",
+        "set_value": "dW5kZWZpbmVk",
+        "next": null,
+        "delay": null
+      },
+      {
+        "type": "question",
+        "left": 399,
+        "top": 221,
+        "w": 181.7111111111111,
+        "h": 39.877777777777794,
+        "name": "Interaction - Time Picker",
+        "id": "e223ecb0-4c84-11e9-bbfa-3d7c51feb38b",
+        "answers": {
+          "responses": []
+        },
+        "when": "time picker, No, Agree, Postpone, Remind Me Later",
+        "text": "Have a question?",
+        "valueFormat": "PREDEFINED",
+        "matchType": "validDateTime",
+        "timePicker": {
+          "active": true,
+          "timeSlotsVariable": "timeslots",
+          "duration": 45,
+          "subtitle": "Schedule an Appointment"
+        },
+        "action": "18171890-4c8c-11e9-bbfa-3d7c51feb38b",
+        "next": "b29de760-50e0-11e9-952b-91599f857975",
+        "delay": null,
+        "variableName": "datatime"
+      },
+      {
+        "type": "action",
+        "left": 822,
+        "top": 173,
+        "w": 120,
+        "h": 40,
+        "name": "Time slots",
+        "id": "18171890-4c8c-11e9-bbfa-3d7c51feb38b",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC50aW1lc2xvdHMgPSAgClsKIHsgICAgICAgICAgICAgICJkdXJhdGlvbiI6IDkwMCwKICAgICAgICAgICAgICAgICJpZGVudGlmaWVyIjogIkZDNEM3RUMyLUY2REUtNDVDMi1CMTA0LUJFMDY3ODQ0ODNDRCIsCiAgICAgICAgICAgICAgICAic3RhcnRUaW1lIjogIjIwMjAtMDUtMDFUMTA6MzBaIgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgImR1cmF0aW9uIjogOTAwLAogICAgICAgICAgICAgICAgImlkZW50aWZpZXIiOiAiMzE1NTRCQTYtM0E3QS00RjVCLTg1OUItNzY5RTgyNTcwQTFEIiwKICAgICAgICAgICAgICAgICJzdGFydFRpbWUiOiAiMjAyMC0wNS0wMVQwODoyNyswMDowMCIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJkdXJhdGlvbiI6IDkwMCwKICAgICAgICAgICAgICAgICJpZGVudGlmaWVyIjogIkVFMjAxNDk0LTFEQ0QtNDI4NS1CQzE4LTAyQTg5QzFFRDc0QSIsCiAgICAgICAgICAgICAgICAic3RhcnRUaW1lIjogIjIwMjAtMDUtMDFUMTA6MzArMDAwMCIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJkdXJhdGlvbiI6IDkwMCwKICAgICAgICAgICAgICAgICJpZGVudGlmaWVyIjogIkVFMjAxNDk0LTFEQ0QtNDI4NS1CQzE4LTAyQTg5QzFFRDc0QiIsCiAgICAgICAgICAgICAgICAic3RhcnRUaW1lIjogIjIwMjAtMDUtMDFUMTY6MzArMDAwMCIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgewogICAgICAgICAgICAgICAgImR1cmF0aW9uIjogOTAwLAogICAgICAgICAgICAgICAgImlkZW50aWZpZXIiOiAiRUUyMDE0OTQtMURDRC00Mjg1LUJDMTgtMDJBODlDMUVENzRDIiwKICAgICAgICAgICAgICAgICJzdGFydFRpbWUiOiAiMjAyMC0wNS0wMVQwODo0NSswMDAwIgogICAgICAgICAgICAgIH0sCiB7ICAgICAgICAgICAgICAiZHVyYXRpb24iOiA5MDAsCiAgICAgICAgICAgICAgICAiaWRlbnRpZmllciI6ICJGQzRDN0VDMi1GNkRFLTQ1QzItQjEwNC1CRTA2Nzg0NDgzQzEiLAogICAgICAgICAgICAgICAgInN0YXJ0VGltZSI6ICIyMDIwLTA2LTI5VDEzOjEwKzAwMDAiCiAgICAgICAgICAgICAgfSwKIHsgICAgICAgICAgICAgICJkdXJhdGlvbiI6IDkwMCwKICAgICAgICAgICAgICAgICJpZGVudGlmaWVyIjogIkZDNEM3RUMyLUY2REUtNDVDMi1CMTA0LUJFMDY3ODQ0ODNDMiIsCiAgICAgICAgICAgICAgICAic3RhcnRUaW1lIjogIjIwMjAtMDYtMjlUMTQ6MTArMDAwMCIKICAgICAgICAgICAgICB9LAogeyAgICAgICAgICAgICAgImR1cmF0aW9uIjogOTAwLAogICAgICAgICAgICAgICAgImlkZW50aWZpZXIiOiAiRkM0QzdFQzItRjZERS00NUMyLUIxMDQtQkUwNjc4NDQ4M0MzIiwKICAgICAgICAgICAgICAgICJzdGFydFRpbWUiOiAiMjAyMC0wNi0yOVQxNToxMCswMDAwIgogICAgICAgICAgICAgIH0sCiB7ICAgICAgICAgICAgICAiZHVyYXRpb24iOiA5MDAsCiAgICAgICAgICAgICAgICAiaWRlbnRpZmllciI6ICJGQzRDN0VDMi1GNkRFLTQ1QzItQjEwNC1CRTA2Nzg0NDgzQzQiLAogICAgICAgICAgICAgICAgInN0YXJ0VGltZSI6ICIyMDIwLTA2LTI5VDA3OjEwKzAwMDAiCiAgICAgICAgICAgICAgfSwKIHsgICAgICAgICAgICAgICJkdXJhdGlvbiI6IDkwMCwKICAgICAgICAgICAgICAgICJpZGVudGlmaWVyIjogIkZDNEM3RUMyLUY2REUtNDVDMi1CMTA0LUJFMDY3ODQ0ODNDNSIsCiAgICAgICAgICAgICAgICAic3RhcnRUaW1lIjogIjIwMjAtMDctMjlUMDg6MTArMDAwMCIKICAgICAgICAgICAgICB9LAogeyAgICAgICAgICAgICAgImR1cmF0aW9uIjogOTAwLAogICAgICAgICAgICAgICAgImlkZW50aWZpZXIiOiAiRkM0QzdFQzItRjZERS00NUMyLUIxMDQtQkUwNjc4NDQ4M0M2IiwKICAgICAgICAgICAgICAgICJzdGFydFRpbWUiOiAiMjAyMC0wNy0yOVQwOToxMCswMDAwIgogICAgICAgICAgICAgIH0KXQ==",
+        "next": "c58991e0-5094-11e9-8dba-5d5ea52755bd",
+        "delay": null
+      },
+      {
+        "type": "card",
+        "left": 422,
+        "top": 138,
+        "w": 120,
+        "h": 40,
+        "name": "List Picker_2",
+        "id": "f5785410-506a-11e9-8dc3-7f74bf7695e1",
+        "items": [],
+        "action": "0fddaad0-4c79-11e9-bbfa-3d7c51feb38b",
+        "listVariableName": "mycard",
+        "multiSectionListPicker": true,
+        "text": "Service Options",
+        "when": "list picker 2",
+        "cards": [],
+        "getCardsByAction": true
+      },
+      {
+        "type": "message",
+        "left": 34,
+        "top": 149,
+        "w": 120,
+        "h": 40,
+        "name": "Start",
+        "id": "91d94560-5072-11e9-8cf0-d97ad468dba5",
+        "buttons": [
+          {
+            "type": "postback",
+            "title": "Get Started",
+            "id": "a916ac40-5072-11e9-8cf0-d97ad468dba5",
+            "payload": "Get Started"
+          }
+        ],
+        "buttonUiType": "button",
+        "intention_id": "8f01dfac-86d5-49ec-bb6d-f6f0ba2e24ab",
+        "text": "Hi there, {globals.system} {deviceAgent}. Join us to get the best ideas, selected just for you. What can i help you with today⁉️ if you get stuck just type main menu and will be teleported right back here.",
+        "trackButtons": true,
+        "when": "start",
+        "transactionTag": ""
+      },
+      {
+        "type": "question",
+        "left": 7,
+        "top": 230,
+        "w": 165.58775725363006,
+        "h": 39.75635130064995,
+        "name": "What interests you?",
+        "id": "0fef8f90-5073-11e9-8cf0-d97ad468dba5",
+        "answers": {
+          "uiType": "button",
+          "responses": [
+            {
+              "id": "1ea12850-5073-11e9-8cf0-d97ad468dba5",
+              "type": "answer",
+              "parent": "0fef8f90-5073-11e9-8cf0-d97ad468dba5",
+              "display": "Technology",
+              "name": "",
+              "left": -98,
+              "top": 369,
+              "h": 40,
+              "w": 120,
+              "next": "7469e970-5073-11e9-8cf0-d97ad468dba5"
+            },
+            {
+              "id": "23c82090-5073-11e9-8cf0-d97ad468dba5",
+              "type": "answer",
+              "parent": "0fef8f90-5073-11e9-8cf0-d97ad468dba5",
+              "display": "Science",
+              "name": "",
+              "left": 51.49944779213732,
+              "top": 369.0496599562109,
+              "h": 40,
+              "w": 120,
+              "next": "7469e970-5073-11e9-8cf0-d97ad468dba5"
+            },
+            {
+              "id": "285faa10-5073-11e9-8cf0-d97ad468dba5",
+              "type": "answer",
+              "parent": "0fef8f90-5073-11e9-8cf0-d97ad468dba5",
+              "display": "Design",
+              "name": "",
+              "left": 239,
+              "top": 371,
+              "h": 40,
+              "w": 120,
+              "next": "7469e970-5073-11e9-8cf0-d97ad468dba5"
+            }
+          ],
+          "trackAnswer": true,
+          "isSatisfaction": true
+        },
+        "when": "Get Started, next",
+        "text": "What interests you?",
+        "valueFormat": "CUSTOM",
+        "variableName": "interest"
+      },
+      {
+        "type": "question",
+        "left": 6,
+        "top": 462,
+        "w": 184.0193851533026,
+        "h": 36.89244123184574,
+        "name": "What you’re looking for",
+        "id": "7469e970-5073-11e9-8cf0-d97ad468dba5",
+        "answers": {
+          "uiType": "quick_replies",
+          "responses": [
+            {
+              "id": "8e7675e0-5073-11e9-8cf0-d97ad468dba5",
+              "type": "answer",
+              "parent": "7469e970-5073-11e9-8cf0-d97ad468dba5",
+              "display": "Glimpse into future",
+              "name": "",
+              "left": -32,
+              "top": 560,
+              "h": 38.3639921722114,
+              "w": 163.45205479452056,
+              "next": "1737ebc0-5074-11e9-8cf0-d97ad468dba5",
+              "expect": ""
+            },
+            {
+              "id": "97f4ba50-5073-11e9-8cf0-d97ad468dba5",
+              "type": "answer",
+              "parent": "7469e970-5073-11e9-8cf0-d97ad468dba5",
+              "display": "A new perspective",
+              "name": "",
+              "left": -213.95303326810173,
+              "top": 491,
+              "h": 44,
+              "w": 147.95303326810173,
+              "url": "https://i2.wp.com/www.petesantucci.com/wp-content/uploads/2017/12/perspective-2.png?fit=810%2C450"
+            },
+            {
+              "id": "53fda040-522c-11e9-a22d-418df6a11c95",
+              "type": "answer",
+              "parent": "7469e970-5073-11e9-8cf0-d97ad468dba5",
+              "display": "ok",
+              "name": "",
+              "left": 246,
+              "top": 498,
+              "h": 40,
+              "w": 120,
+              "next": "1737ebc0-5074-11e9-8cf0-d97ad468dba5",
+              "value": "ok"
+            }
+          ],
+          "trackAnswer": false,
+          "isSatisfaction": false
+        },
+        "text": "Now, tell us what you’re looking for {interest}",
+        "when": "Technology",
+        "valueFormat": "CUSTOM",
+        "variableName": "quick_reply"
+      },
+      {
+        "type": "question",
+        "left": 30,
+        "top": 705,
+        "w": 171.129502212688,
+        "h": 39.287049778731216,
+        "name": "Create Account",
+        "id": "1737ebc0-5074-11e9-8cf0-d97ad468dba5",
+        "answers": {
+          "responses": []
+        },
+        "text": "You chose \"{quick_reply}\". Enter your new password and get your first recommendation right now.",
+        "valueFormat": "REGEXP",
+        "valRegExp": "[abcde]",
+        "valMessage": "Weak password. Please, try again.",
+        "variableName": "password",
+        "next": "15971790-5075-11e9-8cf0-d97ad468dba5"
+      },
+      {
+        "type": "question",
+        "left": 36,
+        "top": 775,
+        "w": 161.53955928679358,
+        "h": 40.79919870326114,
+        "name": "Enter Password Again",
+        "id": "15971790-5075-11e9-8cf0-d97ad468dba5",
+        "answers": {
+          "responses": []
+        },
+        "text": "Please, enter your password again",
+        "valueFormat": "ANY",
+        "matchAny": true,
+        "variableName": "get_password",
+        "next": "36ccd4e0-5075-11e9-8cf0-d97ad468dba5"
+      },
+      {
+        "type": "action",
+        "left": 38,
+        "top": 849,
+        "w": 168.8278155193393,
+        "h": 42.641581347898864,
+        "name": "Password Verification",
+        "id": "36ccd4e0-5075-11e9-8cf0-d97ad468dba5",
+        "action_type": "conditional",
+        "zendesk": {},
+        "conditions": [
+          {
+            "id": "474cec10-5075-11e9-8cf0-d97ad468dba5",
+            "varname": "{password}",
+            "operator": "=",
+            "value": "{get_password}",
+            "next": "7507ec40-5075-11e9-8cf0-d97ad468dba5",
+            "left": -195,
+            "top": 879,
+            "w": 120,
+            "h": 40
+          },
+          {
+            "id": "942fd830-5075-11e9-8cf0-d97ad468dba5",
+            "varname": "{password}",
+            "operator": "<",
+            "value": "{get_password}",
+            "next": "15971790-5075-11e9-8cf0-d97ad468dba5",
+            "left": 485,
+            "top": 826,
+            "w": 120,
+            "h": 40
+          },
+          {
+            "id": "9fd8ebe0-5075-11e9-8cf0-d97ad468dba5",
+            "varname": "{password}",
+            "operator": ">",
+            "value": "{get_password}",
+            "next": "15971790-5075-11e9-8cf0-d97ad468dba5",
+            "left": 487,
+            "top": 880,
+            "w": 120,
+            "h": 40
+          }
+        ],
+        "set_value": "dW5kZWZpbmVk"
+      },
+      {
+        "type": "message",
+        "left": -103,
+        "top": 981,
+        "w": 120,
+        "h": 40,
+        "name": "Lets continue",
+        "id": "7507ec40-5075-11e9-8cf0-d97ad468dba5",
+        "buttons": [
+          {
+            "type": "postback",
+            "title": "Participate",
+            "id": "2cd54c50-5076-11e9-8cf0-d97ad468dba5",
+            "payload": "men.accessories"
+          },
+          {
+            "type": "web_url",
+            "title": "click here!",
+            "id": "11871820-5076-11e9-8cf0-d97ad468dba5",
+            "url": "https://www.youtube.com/watch?v=0OSx0oQZzz4"
+          },
+          {
+            "type": "phone_number",
+            "title": "contact us",
+            "id": "0b9d1e00-5076-11e9-8cf0-d97ad468dba5",
+            "payload": "+448008400001"
+          }
+        ],
+        "buttonUiType": "card",
+        "text": "You chose \"{quick_reply}\" and \"{interest}\". Keep it going – your recommendations get better the more you watch.",
+        "subtitle": "Ideas for you",
+        "image_url": "https://camblycontent.files.wordpress.com/2017/02/advertising-word-block.jpg?w=700",
+        "when": "c"
+      },
+      {
+        "type": "question",
+        "left": 1,
+        "top": 1066,
+        "w": 120,
+        "h": 40,
+        "name": "Enjoy!",
+        "id": "0601b1b0-5079-11e9-8cf0-d97ad468dba5",
+        "answers": {
+          "responses": []
+        },
+        "when": "men.accessories, Participate",
+        "valueFormat": "PREDEFINED",
+        "matchType": "validYear",
+        "text": "Enjoy! You’ll receive recommendations only when we have something great to show you.",
+        "next": "94148b30-5079-11e9-8cf0-d97ad468dba5"
+      },
+      {
+        "type": "message",
+        "left": 213,
+        "top": 1103,
+        "w": 214.26945421207108,
+        "h": 37.702131101483474,
+        "name": "Choose what excites you",
+        "id": "94148b30-5079-11e9-8cf0-d97ad468dba5",
+        "buttons": [
+          {
+            "type": "postback",
+            "title": "Activism",
+            "id": "b0f76920-5079-11e9-8cf0-d97ad468dba5",
+            "url": "http://dummyimage.com/503x853.png/ff4444/ffffff",
+            "payload": "Activism"
+          },
+          {
+            "type": "postback",
+            "title": "Social change",
+            "id": "bb7ff1a0-5079-11e9-8cf0-d97ad468dba5",
+            "url": "http://dummyimage.com/805x578.png/5fa2dd/ffffff",
+            "payload": "Social"
+          },
+          {
+            "type": "postback",
+            "title": "Nature",
+            "id": "c1379120-5079-11e9-8cf0-d97ad468dba5",
+            "url": "http://dummyimage.com/710x563.png/5fa2dd/ffffff",
+            "payload": "Nature"
+          }
+        ],
+        "buttonUiType": "quick_replies",
+        "text": "Choose what excites you. Whether it’s personal growth or shifting your perspective – there’s a whole world of ideas waiting for you.",
+        "when": "Perspective"
+      },
+      {
+        "type": "action",
+        "left": 1029,
+        "top": 73,
+        "w": 120,
+        "h": 40,
+        "name": "Log context",
+        "id": "c58991e0-5094-11e9-8dba-5d5ea52755bd",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "bG9nKCJzZXNzaW9uSWQgOiAiICsgY29udGV4dC5zZXNzaW9uSWQpOwpsb2coImRldmljZUFnZW50IDogIiArIGNvbnRleHQuZGV2aWNlQWdlbnQpOw=="
+      },
+      {
+        "type": "message",
+        "left": 540,
+        "top": 290,
+        "w": 120,
+        "h": 40,
+        "name": "Echo data",
+        "id": "b29de760-50e0-11e9-952b-91599f857975",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "See you at {datatime}!"
+      },
+      {
+        "type": "question",
+        "left": 324,
+        "top": 1153,
+        "w": 240.7204355533047,
+        "h": 42.093188148898435,
+        "name": "One options for you",
+        "id": "f2d749e0-515b-11e9-b71c-996d9745b645",
+        "answers": {
+          "responses": [],
+          "uiType": "quick_replies",
+          "tagsVariableName": "buttonOpt"
+        },
+        "text": "One more option for you",
+        "valueFormat": "CUSTOM",
+        "action": "4915b030-515c-11e9-b71c-996d9745b645",
+        "when": "Activism",
+        "transactionTag": "",
+        "transactionEnd": false
+      },
+      {
+        "type": "action",
+        "left": 511,
+        "top": 1245,
+        "w": 120,
+        "h": 40,
+        "name": "Button Array",
+        "id": "4915b030-515c-11e9-b71c-996d9745b645",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5idXR0b25PcHQgPSBbCnsKICAiY29udGVudF90eXBlIjoidGV4dCIsCiAgInRpdGxlIjoib2siLAogICJ1cmwiOiJodHRwczovL2Nkbi53Y2NmdGVjaC5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMTUvMDcvd2FxdWlja3JlcGx5LmpwZyIsIAogICJwYXlsb2FkIjoiT2siCn0sCnsKICAiY29udGVudF90eXBlIjoidGV4dCIsCiAgInRpdGxlIjoibm8iLAogICJ1cmwiOiJodHRwczovL2Rhc2huZXdzLm9yZy93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wMS9EYXNoLUNvbW11bml0eS1BZHZlcnRpc2VtZW50LUdlbmVyYXRlcy1WZW5lenVlbGFuLU1lcmNoYW50LWFuZC1Db25zdW1lci1JbnRlcmVzdC5qcGciLCAKICAicGF5bG9hZCI6Ik5vIgp9Cl0="
+      },
+      {
+        "type": "message",
+        "left": 256,
+        "top": 1280,
+        "w": 172.56147317838747,
+        "h": 40.16619948591665,
+        "name": "Other exiting options",
+        "id": "70ce6050-522d-11e9-a22d-418df6a11c95",
+        "buttons": [],
+        "buttonUiType": "quick_replies",
+        "text": "Other exiting options",
+        "tagsVariableName": "buttonOpt",
+        "action": "4915b030-515c-11e9-b71c-996d9745b645",
+        "when": "Nature",
+        "next": "3d380860-9e52-11e9-96d0-01871a63f2bf"
+      },
+      {
+        "type": "action",
+        "left": 809,
+        "top": -81,
+        "w": 120,
+        "h": 40,
+        "name": "SET list 2",
+        "id": "36086160-5470-11e9-84ea-0f3396d209e5",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5teWNhcmQgPSAKWwogIHsKICAgICJpbWFnZV91cmwiOiAiaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjUnBvVE1nM1IxeXczVUtUZG9ZVE5UdGlzeHlhT0NVd19RTlRsMnFhaDlZSHpxcVl2cHUiLAogICAgICAgICAgICAgICAgInRpdGxlIjogIlNhbGUiLAogICAgImJ1dHRvbnMiOiBbCiAgICAgIHsgdHlwZToid2ViX3VybCIsICJ0aXRsZSI6IlNhbGUgSXRlbXMiLCAidXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZS5jby51ay9zZWFyY2g/cT1zYWxlK2l0ZW1zIn0KICAgIF0KICB9Cl0="
+      },
+      {
+        "type": "action",
+        "left": 117,
+        "top": 1260,
+        "w": 120,
+        "h": 40,
+        "name": "POST Data",
+        "id": "e2f03080-554f-11e9-aa92-c58f3942e667",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "endpoint": "https://olsauser.serveo.net/api/product/create.php",
+        "method": "POST",
+        "action_body": "{\n\"category_id\":\"2\",\n\"description\":\"Action from abc\",\n\"name\":\"abc\",\n\"price\":\"500.00\"\n}",
+        "set_value": "dW5kZWZpbmVk",
+        "authentication": "Basic cmJvd2VuOmRlbW8=",
+        "setData": "message",
+        "variableName": "res",
+        "when": "post",
+        "next": "45eca780-5551-11e9-a6c8-c936b0f05cbd",
+        "delay": null,
+        "ttl": 1
+      },
+      {
+        "type": "message",
+        "left": -44,
+        "top": 1148,
+        "w": 120,
+        "h": 40,
+        "name": "POST start",
+        "id": "351e8cd0-5550-11e9-aa92-c58f3942e667",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Create new user",
+        "next": "e2f03080-554f-11e9-aa92-c58f3942e667",
+        "when": "post"
+      },
+      {
+        "type": "message",
+        "left": 7,
+        "top": 1359,
+        "w": 120,
+        "h": 40,
+        "name": "POST finish",
+        "id": "45eca780-5551-11e9-a6c8-c936b0f05cbd",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Result {(res)}"
+      },
+      {
+        "type": "question",
+        "left": -1178,
+        "top": -676,
+        "w": 120,
+        "h": 40,
+        "name": "Buttons",
+        "id": "aa4d5800-5b69-11e9-9fd2-355725c11ffd",
+        "answers": {
+          "uiType": "button",
+          "responses": [
+            {
+              "id": "b44400c0-5b69-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "aa4d5800-5b69-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name.",
+              "name": "",
+              "left": -1328.061889666589,
+              "top": -535.4665900207317,
+              "h": 40,
+              "w": 120,
+              "value": "This is the value."
+            },
+            {
+              "id": "c6a1ffb0-5b69-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "aa4d5800-5b69-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - QWERTYUIOPLKJHGFDSAZXCVBNM",
+              "name": "",
+              "left": -1178.061889666589,
+              "top": -535.4665900207317,
+              "h": 40,
+              "w": 120,
+              "value": "another value"
+            },
+            {
+              "id": "cde4fa20-5b69-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "aa4d5800-5b69-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - POIUYTREWQASDFGHJKLKMNBVCXZ1234567890987654321",
+              "name": "",
+              "left": -1028.061889666589,
+              "top": -535.4665900207317,
+              "h": 40,
+              "w": 120,
+              "value": "value"
+            }
+          ]
+        },
+        "when": "buttons",
+        "text": "long answer buttons",
+        "valueFormat": "CUSTOM"
+      },
+      {
+        "type": "question",
+        "left": -697,
+        "top": -709,
+        "w": 120,
+        "h": 40,
+        "name": "quick replies",
+        "id": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+        "answers": {
+          "uiType": "quick_replies",
+          "responses": [
+            {
+              "id": "16e99aa0-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name.  1234567890",
+              "name": "",
+              "left": -667.1330056896052,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "12345"
+            },
+            {
+              "id": "1cc82310-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name.  - 1234567890987654321234567890",
+              "name": "",
+              "left": -527.1330056896052,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120
+            },
+            {
+              "id": "21ff20e0-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - 1234567890987654321234567890987654321",
+              "name": "",
+              "left": -387.13300568960517,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "398457"
+            },
+            {
+              "id": "2856f800-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 123",
+              "name": "",
+              "left": -247.13300568960517,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "124356"
+            },
+            {
+              "id": "3f64ea70-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 987619234232457123",
+              "name": "",
+              "left": -107.13300568960517,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "26456453"
+            },
+            {
+              "id": "47f6d310-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2ce23",
+              "name": "",
+              "left": 32.86699431039483,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "234d34d234"
+            },
+            {
+              "id": "4f571980-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2cesdfw45345f34f34rc323",
+              "name": "",
+              "left": 172.86699431039483,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "expect": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2ce23"
+            },
+            {
+              "id": "659538d0-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2ce23 21342c5f46256g245f24562456",
+              "name": "",
+              "left": 312.86699431039483,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "expect": "24f23cf23234d23"
+            },
+            {
+              "id": "6abd4280-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2ce23 234f3c53f4256g345g34545453453456g3456g 56y 45y45g",
+              "name": "",
+              "left": 452.86699431039483,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "345g5 t35t 435t34"
+            },
+            {
+              "id": "70f2eba0-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2ce23 34ru3f598yt490h3 4th 93u4ht 93u4htv93uh4tv93uht49384t 9u349u34t9u3n",
+              "name": "",
+              "left": 592.8669943103948,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120,
+              "value": "435345cr34"
+            },
+            {
+              "id": "76f528b0-5b6a-11e9-9fd2-355725c11ffd",
+              "type": "answer",
+              "parent": "09fc4720-5b6a-11e9-9fd2-355725c11ffd",
+              "display": "This is a long button name and is prbs to long for a button name. - poiuytrewqasdfghjklzxcvbnmlkjhgfdsaqwertyuiop 298734982375rfy4034hru2ce23 234uc29n845vy394 uht3948htv 93ru4394unri3c4 nr8u34h rfu3n4iu3nr4u93v 49urn3 9u4nrt93u 4n9 v3u4ht v93u4rt9 vu",
+              "name": "",
+              "left": 732.8669943103948,
+              "top": -569.3910341186933,
+              "h": 40,
+              "w": 120
+            }
+          ]
+        },
+        "when": "quick",
+        "text": "quick replies buttons",
+        "valueFormat": "CUSTOM"
+      },
+      {
+        "type": "message",
+        "left": -167,
+        "top": -139,
+        "w": 201,
+        "h": 59,
+        "name": "Cards Test Interaction",
+        "id": "514c3a30-5d14-11e9-9610-1f40156a5497",
+        "buttons": [
+          {
+            "type": "postback",
+            "title": "ok",
+            "id": "5e134100-5d14-11e9-9610-1f40156a5497",
+            "payload": "ok"
+          }
+        ],
+        "buttonUiType": "card",
+        "when": "card",
+        "text": "Cards Test Interaction",
+        "subtitle": "sub title",
+        "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+        "requireslink": false
+      },
+      {
+        "type": "message",
+        "left": -166,
+        "top": -46,
+        "w": 202.1736554474412,
+        "h": 57.27477167975417,
+        "name": "Quick Reply Test Interaction",
+        "id": "618cf710-5d17-11e9-b0b2-6b4858f2e8ff",
+        "buttons": [
+          {
+            "type": "postback",
+            "title": "ok",
+            "id": "6cc9b460-5d17-11e9-b0b2-6b4858f2e8ff",
+            "payload": "ok",
+            "url": "https://i2.wp.com/www.petesantucci.com/wp-content/uploads/2017/12/perspective-2.png?fit=810%2C450"
+          }
+        ],
+        "buttonUiType": "quick_replies",
+        "when": "reply, 12345",
+        "text": "Quick Reply Test Interaction"
+      },
+      {
+        "type": "payment",
+        "left": -982,
+        "top": -144,
+        "w": 171.77210834553034,
+        "h": 43.22164186727274,
+        "name": "Test Payment",
+        "id": "c9e379b0-5d17-11e9-a418-a306dcc20dd2",
+        "when": "payment",
+        "text": "Order from the list",
+        "paymentDataVariable": "restPaymentData",
+        "actions": {
+          "success": "e26b0c70-5d1a-11e9-95ee-9115cc309a3d",
+          "failure": "eb09c650-5d1a-11e9-95ee-9115cc309a3d",
+          "paymentMethodUpdate": "14c51030-5d1b-11e9-95ee-9115cc309a3d",
+          "shippingContactUpdate": "225c5f50-5d1b-11e9-95ee-9115cc309a3d",
+          "shippingMethodUpdate": "38335860-5d1b-11e9-95ee-9115cc309a3d",
+          "orderTrackingUrl": "6f5dfc60-5d2e-11e9-9594-1b9b7398ca44"
+        }
+      },
+      {
+        "type": "message",
+        "left": -1277,
+        "top": -354,
+        "w": 151.62434710068192,
+        "h": 47.20811570022728,
+        "name": "Start Payment",
+        "id": "4ed70cc0-5d1a-11e9-95ee-9115cc309a3d",
+        "buttons": [],
+        "buttonUiType": "button",
+        "when": "pay",
+        "text": "Are you looking for one of our products?",
+        "next": "74d0e1d0-5d1a-11e9-95ee-9115cc309a3d",
+        "action": null,
+        "delay": null,
+        "d_top": null,
+        "d_left": null,
+        "tagsVariableName": ""
+      },
+      {
+        "type": "action",
+        "left": -1025,
+        "top": -295,
+        "w": 163,
+        "h": 47,
+        "name": "Get Apple Pay data",
+        "id": "74d0e1d0-5d1a-11e9-95ee-9115cc309a3d",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5yZXN0UGF5bWVudERhdGEgPSAiIjs=",
+        "next": "c9e379b0-5d17-11e9-a418-a306dcc20dd2",
+        "when": "get",
+        "endpoint": "https://OlsaUser.github.io/applePayApi/JaneExample/initialData_Jane.json",
+        "method": "GET",
+        "variableName": "restPaymentData",
+        "setData": "",
+        "delay": null
+      },
+      {
+        "type": "message",
+        "left": -1226,
+        "top": -84,
+        "w": 120,
+        "h": 40,
+        "name": "Payment Done!",
+        "id": "e26b0c70-5d1a-11e9-95ee-9115cc309a3d",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Payment {total} Done!"
+      },
+      {
+        "type": "message",
+        "left": -1083,
+        "top": 27,
+        "w": 120,
+        "h": 40,
+        "name": "Payment Failed",
+        "id": "eb09c650-5d1a-11e9-95ee-9115cc309a3d",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Payment Failed"
+      },
+      {
+        "type": "action",
+        "left": -660,
+        "top": -231,
+        "w": 158.75794040012977,
+        "h": 44,
+        "name": "paymentMethod",
+        "id": "14c51030-5d1b-11e9-95ee-9115cc309a3d",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "set_value": "emN6",
+        "endpoint": "https://OlsaUser.github.io/applePayApi/JaneExample/initialData_Jane.json",
+        "method": "GET",
+        "variableName": "restPaymentData"
+      },
+      {
+        "type": "action",
+        "left": -542,
+        "top": -126,
+        "w": 161.048411919974,
+        "h": 49.524205959987015,
+        "name": "shippingContact",
+        "id": "225c5f50-5d1b-11e9-95ee-9115cc309a3d",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "set_value": "ZGZzZGY=",
+        "endpoint": "https://olsauser.github.io/applePayApi/JaneExample/shippingContactUpdate_Jane.json",
+        "method": "GET",
+        "variableName": "restPaymentData",
+        "setData": ""
+      },
+      {
+        "type": "action",
+        "left": -625,
+        "top": -30,
+        "w": 162.23373444014283,
+        "h": 45.73789702000649,
+        "name": "shippingUpdate",
+        "id": "38335860-5d1b-11e9-95ee-9115cc309a3d",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "set_value": "emZzZGQ=",
+        "endpoint": "https://olsauser.github.io/applePayApi/JaneExample/shippingMethodUpdate_Jane.json",
+        "method": "GET",
+        "variableName": "restPaymentData"
+      },
+      {
+        "type": "action",
+        "left": -843,
+        "top": 30,
+        "w": 120,
+        "h": 40,
+        "name": "track",
+        "id": "6f5dfc60-5d2e-11e9-9594-1b9b7398ca44",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5pdGVtcyA9IGNvbnRleHQucmVzdFBheW1lbnREYXRhLml0ZW1zLmxhYmVsOwpjb250ZXh0LnRvdGFsID0gY29udGV4dC5yZXN0UGF5bWVudERhdGEudG90YWwuYW1vdW50Ow=="
+      },
+      {
+        "type": "message",
+        "left": -152,
+        "top": -205,
+        "w": 120,
+        "h": 40,
+        "name": "Live Agent",
+        "id": "6e169cb0-680d-11e9-9131-0994bdca3a07",
+        "buttons": [
+          {
+            "type": "live_agent",
+            "title": "Connect",
+            "id": "7d96f720-680d-11e9-9131-0994bdca3a07",
+            "live_agent": "converse-livetakeover",
+            "payload": "vhjk"
+          },
+          {
+            "type": "live_agent",
+            "title": "SalesForce Agent",
+            "id": "ae397dc0-762d-11e9-80a2-411e17414f68",
+            "live_agent": "salesforce-liveagent",
+            "sf_organization_id": "00D2E0000014IiX",
+            "sf_deployment_id": "5722E0000004O1F",
+            "sf_button_id": "5732E0000004OWV"
+          }
+        ],
+        "buttonUiType": "card",
+        "when": "help me, help, agent, online help, support",
+        "text": "Press button to start a conversation with an Agent",
+        "subtitle": "Online Help",
+        "image_url": "https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png"
+      },
+      {
+        "type": "message",
+        "left": -424,
+        "top": 112,
+        "w": 120,
+        "h": 40,
+        "name": "Good afternoon",
+        "id": "3d2cbe20-6b57-11e9-918a-2db8ad8f5cb9",
+        "buttons": [],
+        "buttonUiType": "button",
+        "when": "afternoon",
+        "text": "Good afternoon",
+        "next": "4958bd70-6b57-11e9-918a-2db8ad8f5cb9"
+      },
+      {
+        "type": "action",
+        "left": -435,
+        "top": 194,
+        "w": 120,
+        "h": 40,
+        "name": "GroupID",
+        "id": "4958bd70-6b57-11e9-918a-2db8ad8f5cb9",
+        "action_type": "conditional",
+        "zendesk": {},
+        "conditions": [
+          {
+            "id": "65cb9b80-6b57-11e9-918a-2db8ad8f5cb9",
+            "varname": "{appleGroupID}",
+            "operator": "=",
+            "value": "Test1",
+            "next": "69ecbc80-6b57-11e9-918a-2db8ad8f5cb9",
+            "left": -531,
+            "top": 326,
+            "w": 120,
+            "h": 40
+          },
+          {
+            "id": "929277b0-6b57-11e9-918a-2db8ad8f5cb9",
+            "varname": "{appleGroupID}",
+            "operator": "=",
+            "value": "Test2",
+            "next": "7cc6a230-6b57-11e9-918a-2db8ad8f5cb9",
+            "left": -285,
+            "top": 334,
+            "w": 120,
+            "h": 40
+          }
+        ],
+        "set_value": "dW5kZWZpbmVk"
+      },
+      {
+        "type": "message",
+        "left": -562.0335060572125,
+        "top": 432.5230668600241,
+        "w": 120,
+        "h": 40,
+        "name": "Test1",
+        "id": "69ecbc80-6b57-11e9-918a-2db8ad8f5cb9",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Group ID: Test1"
+      },
+      {
+        "type": "message",
+        "left": -374.25521959859424,
+        "top": 446.1178749294263,
+        "w": 120,
+        "h": 40,
+        "name": "Test2",
+        "id": "7cc6a230-6b57-11e9-918a-2db8ad8f5cb9",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "GroupID: Test2"
+      },
+      {
+        "type": "message",
+        "left": -813,
+        "top": 200,
+        "w": 120,
+        "h": 40,
+        "name": "Good evening",
+        "id": "9bb09ac0-6b57-11e9-918a-2db8ad8f5cb9",
+        "buttons": [],
+        "buttonUiType": "button",
+        "when": "evening",
+        "text": "Good evening",
+        "next": "b1cc6500-6b57-11e9-918a-2db8ad8f5cb9"
+      },
+      {
+        "type": "message",
+        "left": -882,
+        "top": 658,
+        "w": 120,
+        "h": 40,
+        "name": "Intent1",
+        "id": "a2f25cb0-6b57-11e9-918a-2db8ad8f5cb9",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Intent1"
+      },
+      {
+        "type": "message",
+        "left": -736,
+        "top": 565,
+        "w": 120,
+        "h": 40,
+        "name": "Intent2",
+        "id": "a9629dd0-6b57-11e9-918a-2db8ad8f5cb9",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Intent2"
+      },
+      {
+        "type": "action",
+        "left": -817,
+        "top": 308,
+        "w": 120,
+        "h": 40,
+        "name": "IntentID",
+        "id": "b1cc6500-6b57-11e9-918a-2db8ad8f5cb9",
+        "action_type": "conditional",
+        "zendesk": {},
+        "conditions": [
+          {
+            "id": "c0ad2410-6b57-11e9-918a-2db8ad8f5cb9",
+            "varname": "{appleIntentID}",
+            "operator": "=",
+            "value": "Intent1",
+            "next": "a2f25cb0-6b57-11e9-918a-2db8ad8f5cb9",
+            "left": -891.9361573585043,
+            "top": 448.4704432267287,
+            "w": 120,
+            "h": 40
+          },
+          {
+            "id": "c5c48bf0-6b57-11e9-918a-2db8ad8f5cb9",
+            "varname": "{appleIntentID}",
+            "operator": "=",
+            "value": "Intent2",
+            "next": "a9629dd0-6b57-11e9-918a-2db8ad8f5cb9",
+            "left": -741.9361573585043,
+            "top": 448.4704432267287,
+            "w": 120,
+            "h": 40
+          }
+        ],
+        "set_value": "dW5kZWZpbmVk"
+      },
+      {
+        "type": "message",
+        "left": -2004,
+        "top": 106,
+        "w": 198.69358470444607,
+        "h": 51.43230164533527,
+        "name": "Account link",
+        "id": "5fed2320-7889-11e9-9aec-31092bd6c8eb",
+        "buttons": [
+          {
+            "type": "account_link",
+            "title": "Log in",
+            "id": "61df0810-7889-11e9-9aec-31092bd6c8eb",
+            "url": "https://black-duck-92.localtunnel.me/rest-api-authentication-example/",
+            "instance": "https://black-duck-92.localtunnel.me/rest-api-authentication-example/api/login.php"
+          },
+          {
+            "type": "account_unlink",
+            "title": "log out",
+            "id": "44726460-8384-11e9-a8c1-e1038ced7b72",
+            "payload": "but"
+          },
+          {
+            "type": "web_url",
+            "title": "URL",
+            "id": "490273d0-8384-11e9-a8c1-e1038ced7b72",
+            "url": "https://www.youtube.com/watch?v=0OSx0oQZzz4"
+          }
+        ],
+        "buttonUiType": "button",
+        "text": "Login to proceed with your request",
+        "when": "link"
+      },
+      {
+        "type": "card",
+        "left": 464,
+        "top": -413,
+        "w": 120,
+        "h": 40,
+        "name": "Card Demo",
+        "id": "d28db836-642d-4e98-8148-f3b801d77e4d",
+        "items": [],
+        "cards": [
+          {
+            "id": "814e3e80-7bb0-11e9-8464-1bdbbd78d889",
+            "buttons": [
+              {
+                "type": "web_url",
+                "title": "link name",
+                "id": "f69bd8a0-7bb0-11e9-8464-1bdbbd78d889",
+                "url": "http://www.google.com",
+                "image_url": "https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png"
+              },
+              {
+                "type": "postback",
+                "title": "postback",
+                "id": "cce05010-9f30-11e9-be9e-f9db134279d2",
+                "payload": "1",
+                "image_url": "https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png"
+              },
+              {
+                "type": "phone_number",
+                "title": "phone",
+                "id": "d1a181a0-9f30-11e9-be9e-f9db134279d2",
+                "payload": "+448008400001",
+                "image_url": "https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png"
+              }
+            ],
+            "title": "This is the title",
+            "subtitle": "This is the sub title",
+            "image_url": "https://assets3.thrillist.com/v1/image/2797371/size/tmg-article_default_mobile.jpg"
+          },
+          {
+            "id": "9d0a4fb0-7bb0-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "image_url": "https://foodrevolution.org/wp-content/uploads/2018/04/blog-featured-diabetes-20180406-1330.jpg",
+            "title": "This is another title ... a very long title... that is probs to long to even see.",
+            "subtitle": "This is a very long sub title too. and its probs to long to be a sub title too, but im not to sure about it."
+          },
+          {
+            "id": "50a8ac10-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "title": "title",
+            "subtitle": "subtitle",
+            "image_url": "https://thumbs-prod.si-cdn.com/djz7f_pX8z0guq4fu-aT_HxWBy8=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/9d/f5/9df541d1-be62-4f69-bcbe-2fe59647b022/milkyway.jpeg"
+          },
+          {
+            "id": "6795f720-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "title": "space",
+            "subtitle": "im the best at space",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0XaJ8xNhbmab8uT2bVvyLDH8oWMW8u-MIvLQ8zN_tuei2prpm"
+          },
+          {
+            "id": "822a9f50-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "title": "stars",
+            "subtitle": "stars!!",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZ8NWABXKiR8guz9BTYF3W-o16LgNKdDVc5QQJDnK6ao6u36DCQ"
+          },
+          {
+            "id": "927e9d70-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTurHf2RWvjyLe6_AUYTjUx_g_QavXyOrP3T85wfvlJsxKch0FlQA",
+            "title": "space 123",
+            "subtitle": "space 12345"
+          },
+          {
+            "id": "a641aaa0-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNL102A7wO0uSQxdxk5mwvJOh3neYkz0D_glGZ740vRzNq3o_erA",
+            "title": "three left",
+            "subtitle": "3 is a magic number"
+          },
+          {
+            "id": "b61bbdd0-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "1",
+                "id": "8e262c40-9e41-11e9-a0ef-b358e50ef947",
+                "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg",
+                "payload": "1"
+              },
+              {
+                "type": "postback",
+                "title": "2",
+                "id": "9497f400-9e41-11e9-a0ef-b358e50ef947",
+                "image_url": "https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png",
+                "payload": "2"
+              }
+            ],
+            "title": "do gifs work?",
+            "subtitle": "i wonder",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKsQh7UpMJk3O3luIWjbwK0XcgiMa81UAfRctsWY_-6EhUp1wtCQ"
+          },
+          {
+            "id": "c324fdc0-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "title": "earth",
+            "subtitle": "sounds like dirt",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKsQh7UpMJk3O3luIWjbwK0XcgiMa81UAfRctsWY_-6EhUp1wtCQ"
+          },
+          {
+            "id": "d2123ff0-7bb1-11e9-8464-1bdbbd78d889",
+            "buttons": [],
+            "title": "lazer beams",
+            "subtitle": "freaking lazer beams",
+            "image_url": "https://media2.s-nbcnews.com/j/newscms/2018_46/2643091/181112-earth-laser-aliens-mit-cs-1001a_47d24350a06ebe6e25e9239db9d2195a.fit-760w.jpg"
+          }
+        ],
+        "when": "demo",
+        "text": "this is the new card layout...",
+        "listVariableName": "",
+        "multiSectionListPicker": false
+      },
+      {
+        "type": "card",
+        "left": 468,
+        "top": -347,
+        "w": 120,
+        "h": 40,
+        "name": "Mens clothing index",
+        "id": "6171ff0d-2b16-4054-816b-a1dc35c54456",
+        "items": [],
+        "when": "men",
+        "text": "Nice, here is a small selection of some of our new and upcoming products take a look!!",
+        "listVariableName": "mensclothing",
+        "delay": 2,
+        "d_left": 1379,
+        "d_top": 51,
+        "multiSectionListPicker": true,
+        "cards": [],
+        "getCardsByAction": true,
+        "action": "966e1455-f868-4447-9228-213cc4f8bb16"
+      },
+      {
+        "type": "action",
+        "left": 728,
+        "top": -404,
+        "w": 120,
+        "h": 40,
+        "name": "mens clothing actions",
+        "id": "966e1455-f868-4447-9228-213cc4f8bb16",
+        "action_type": "set_variable",
+        "zendesk": {},
+        "set_value": "Y29udGV4dC5tZW5zY2xvdGhpbmcgPSBbewoJCSJpbWFnZV91cmwiOiAiaHR0cHM6Ly90aHVtYnMtcHJvZC5zaS1jZG4uY29tL2RqejdmX3BYOHowZ3VxNGZ1LWFUX0h4V0J5OD0vODAweDYwMC9maWx0ZXJzOm5vX3Vwc2NhbGUoKS9odHRwczovL3B1YmxpYy1tZWRpYS5zaS1jZG4uY29tL2ZpbGVyLzlkL2Y1LzlkZjU0MWQxLWJlNjItNGY2OS1iY2JlLTJmZTU5NjQ3YjAyMi9taWxreXdheS5qcGVnIiwKCQkidGl0bGUiOiAiU2FsZSIsCgkJImJ1dHRvbnMiOiBbewoJCQkidHlwZSI6ICJ3ZWJfdXJsIiwKCQkJInRpdGxlIjogIlNhbGUgSXRlbXMiLAoJCQkidXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZS5jby51ay9zZWFyY2g/cT1zYWxlK2l0ZW1zIgoJCX1dCgl9LAoJewoJCSJpbWFnZV91cmwiOiAiaHR0cHM6Ly90aHVtYnMtcHJvZC5zaS1jZG4uY29tL2RqejdmX3BYOHowZ3VxNGZ1LWFUX0h4V0J5OD0vODAweDYwMC9maWx0ZXJzOm5vX3Vwc2NhbGUoKS9odHRwczovL3B1YmxpYy1tZWRpYS5zaS1jZG4uY29tL2ZpbGVyLzlkL2Y1LzlkZjU0MWQxLWJlNjItNGY2OS1iY2JlLTJmZTU5NjQ3YjAyMi9taWxreXdheS5qcGVnIiwKCQkidGl0bGUiOiAiSnVtcGVyIiwKCQkiYnV0dG9ucyI6IFt7CgkJCSJ0eXBlIjogIndlYl91cmwiLAoJCQkidGl0bGUiOiAianVtcGVycyIsCgkJCSJ1cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvLnVrL3NlYXJjaD9xPW1lbnMranVtcGVycyIKCQl9XQoJfQpdOw==",
+        "when": "mens clothing",
+        "delay": null,
+        "d_left": 1497,
+        "d_top": 196
+      },
+      {
+        "type": "message",
+        "left": 679,
+        "top": 523,
+        "w": 120,
+        "h": 40,
+        "name": "something",
+        "id": "901a573a-c4b9-48ff-8bc0-f9b17c50a929",
+        "buttons": [],
+        "buttonUiType": "button",
+        "when": "",
+        "text": "this thing",
+        "intention_id": null,
+        "transactionEnd": false,
+        "transactionTag": ""
+      },
+      {
+        "type": "question",
+        "left": 536,
+        "top": 382,
+        "w": 120,
+        "h": 40,
+        "name": "1",
+        "id": "2e96c330-d1e0-4991-935c-cf0a3b352882",
+        "answers": {
+          "uiType": "button",
+          "responses": [
+            {
+              "id": "9d55455c-5fa1-4b54-831a-c08d1eb22905",
+              "type": "answer",
+              "parent": "2e96c330-d1e0-4991-935c-cf0a3b352882",
+              "display": "A",
+              "name": "",
+              "left": 710,
+              "top": 440,
+              "h": 40,
+              "w": 120,
+              "next": "901a573a-c4b9-48ff-8bc0-f9b17c50a929",
+              "expect": "A",
+              "value": ""
+            },
+            {
+              "id": "aa6892b9-d1b5-42ef-9f7d-ff9eece89c40",
+              "type": "answer",
+              "parent": "2e96c330-d1e0-4991-935c-cf0a3b352882",
+              "display": "B",
+              "name": "",
+              "left": 1017,
+              "top": 403,
+              "h": 40,
+              "w": 120,
+              "expect": "B",
+              "next": "849e75c1-6f48-4e74-b9f1-ad4e3f58affb"
+            }
+          ]
+        },
+        "when": "1",
+        "text": "1",
+        "valueFormat": "CUSTOM",
+        "transactionTag": ""
+      },
+      {
+        "type": "question",
+        "left": 852,
+        "top": 529,
+        "w": 120,
+        "h": 40,
+        "name": "2 (copy 1)",
+        "id": "849e75c1-6f48-4e74-b9f1-ad4e3f58affb",
+        "answers": {
+          "responses": []
+        },
+        "text": "2",
+        "valueFormat": "ANY",
+        "matchAny": true
+      },
+      {
+        "type": "card",
+        "left": 469,
+        "top": -272,
+        "w": 120,
+        "h": 40,
+        "name": "Image Button",
+        "id": "97b747e0-9279-11e9-947c-d70e75687444",
+        "items": [],
+        "cards": [
+          {
+            "id": "a8b31ec0-9279-11e9-947c-d70e75687444",
+            "buttons": [
+              {
+                "type": "web_url",
+                "title": "url",
+                "id": "d4edc080-9279-11e9-947c-d70e75687444",
+                "image_url": "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/11990418_442606765926870_215300303224956260_n.png?_nc_cat=1&_nc_ht=scontent-lhr3-1.xx&oh=783edecf5642049c525f26454b53d6a3&oe=5D87D1D2",
+                "url": "https://www.google.com"
+              },
+              {
+                "type": "postback",
+                "title": "post back",
+                "id": "a26e8f40-927e-11e9-abc6-67f86b6fd0be",
+                "image_url": "https://voluum.com/blog/wp-content/uploads/sites/3/2018/08/V_blog_vs_01_08_2018_2.jpg",
+                "payload": "<>"
+              },
+              {
+                "type": "phone_number",
+                "title": "phone",
+                "id": "bbed3390-927e-11e9-abc6-67f86b6fd0be",
+                "image_url": "https://www.ligo.co.uk/media/catalog/product/cache/1/image/2500x/9df78eab33525d08d6e5fb8d27136e95/t/g/tgh260-1.jpg",
+                "payload": "0"
+              }
+            ],
+            "title": "This is a title",
+            "subtitle": "subtitle",
+            "image_url": "https://zakupywm1.pl/uploads/shops/banner_224.jpg"
+          }
+        ],
+        "when": "btn",
+        "text": "this is button",
+        "getCardsByAction": false,
+        "action": null,
+        "listVariableName": "",
+        "multiSectionListPicker": false
+      },
+      {
+        "type": "question",
+        "left": -1953,
+        "top": 212,
+        "w": 181.3981991766135,
+        "h": 37.79478927820378,
+        "name": "Any answer",
+        "id": "8aadfa96-5522-4661-8a34-1cc2594ae74d",
+        "answers": {
+          "responses": []
+        },
+        "valueFormat": "ANY",
+        "timePicker": {
+          "active": true,
+          "timeSlotsVariable": "deliveryTimeslots",
+          "duration": 10,
+          "subtitle": "Selected delivery date"
+        },
+        "text": "Please pick delivery date",
+        "variableName": "",
+        "requireslink": true,
+        "link_action": "37731656-d8bb-4a0c-a97f-25676776428a",
+        "matchAny": true,
+        "when": "0"
+      },
+      {
+        "type": "message",
+        "left": -2237,
+        "top": 132,
+        "w": 120,
+        "h": 40,
+        "name": "Authentication",
+        "id": "37731656-d8bb-4a0c-a97f-25676776428a",
+        "buttons": [
+          {
+            "type": "account_link",
+            "title": "Login",
+            "id": "3a5f5e20-8b94-11e9-8eac-6bd78c4270c2",
+            "url": "https://converseauth.ces.pitneycloud.com/login?response_type=code&client_id=4c68gtk8gnpnpi1pe2gjkb4c3n&state={sessionId}&redirect_uri=https%3A%2F%2Fconverse-qa-iad.ces.pitneycloud.com%2Fauthorize%2Fredirect"
+          }
+        ],
+        "buttonUiType": "button",
+        "when": "auth",
+        "text": "We need you to log in to proceed with your order",
+        "next": null,
+        "delay": null,
+        "d_top": null,
+        "d_left": null,
+        "action": null
+      },
+      {
+        "type": "action",
+        "left": -2306,
+        "top": 232,
+        "w": 172.7898211652373,
+        "h": 39.934181569563634,
+        "name": "Authentication action",
+        "id": "dac2391e-bc6a-4c7c-9a4b-1c6ddd182b56",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "endpoint": "https://converseauth.ces.pitneycloud.com/oauth2/token",
+        "method": "POST",
+        "authentication": "Basic NGM2OGd0azhnbnBucGkxcGUyZ2prYjRjM246MTJoNXJhbTNyOHVwMDFwcjFjczZoaWp2MTFjNjY3ZWFkYzlmYXRnODdhanBncGdnOHBpaw==",
+        "contentType": "application/x-www-form-urlencoded",
+        "action_body": "grant_type=authorization_code&client_id=4c68gtk8gnpnpi1pe2gjkb4c3n&redirect_uri=https%3A%2F%2Fconverse-qa-iad.ces.pitneycloud.com%2Fauthorize%2Fredirect&code={{authCode}}",
+        "variableName": "accessToken",
+        "setData": "access_token",
+        "setErrorData": "access_token",
+        "setErrorDataPredicate": "not_contains",
+        "requireslink": true,
+        "set_value": "dW5kZWZpbmVk",
+        "next": "dd649b98-f734-468d-af12-2e093b57974e",
+        "link_action": "37731656-d8bb-4a0c-a97f-25676776428a"
+      },
+      {
+        "type": "action",
+        "left": -2293,
+        "top": 322,
+        "w": 120,
+        "h": 40,
+        "name": "Get user info",
+        "id": "dd649b98-f734-468d-af12-2e093b57974e",
+        "action_type": "rest_data",
+        "zendesk": {},
+        "endpoint": "https://converseauth.ces.pitneycloud.com/oauth2/userInfo",
+        "method": "GET",
+        "authentication": "Bearer {accessToken}",
+        "variableName": "userData",
+        "setErrorDataPredicate": "not_contains",
+        "setErrorData": "username",
+        "set_value": "dW5kZWZpbmVk",
+        "next": "78eac3f7-abeb-4a59-bd65-5801cec47572",
+        "delay": 2,
+        "d_left": -2137,
+        "d_top": 392
+      },
+      {
+        "type": "message",
+        "left": -2023,
+        "top": 355,
+        "w": 155.51009283588223,
+        "h": 37.90127235434534,
+        "name": "Ready to deliver",
+        "id": "78eac3f7-abeb-4a59-bd65-5801cec47572",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "Welcome {userData.username}! We're now ready to deliver your order.",
+        "next": "8aadfa96-5522-4661-8a34-1cc2594ae74d",
+        "delay": 2,
+        "d_left": -1820,
+        "d_top": 322
+      },
+      {
+        "type": "action",
+        "left": -2601,
+        "top": 188,
+        "w": 198.44305109813104,
+        "h": 40.94069653021393,
+        "name": "Authentication conditions",
+        "id": "bbc0cd4e-1051-4eb4-a1ff-30109f0ca825",
+        "action_type": "conditional",
+        "zendesk": {},
+        "conditions": [
+          {
+            "id": "83efca3e-09a2-4811-9adf-7f975d9d3261",
+            "varname": "{accessToken}",
+            "operator": "NONEMPTY",
+            "value": "",
+            "next": "dd649b98-f734-468d-af12-2e093b57974e",
+            "timedate": {
+              "startDate": "",
+              "endDate": ""
+            },
+            "prettyDate": "",
+            "left": -2605,
+            "top": 321,
+            "w": 200.48258674465524,
+            "h": 42.98023217673813
+          }
+        ],
+        "set_value": "dW5kZWZpbmVk",
+        "next": "dac2391e-bc6a-4c7c-9a4b-1c6ddd182b56"
+      },
+      {
+        "type": "message",
+        "left": -1366,
+        "top": 210,
+        "w": 120,
+        "h": 40,
+        "name": "Foot size flow",
+        "id": "8136f5a7-d84e-4879-9d8b-e33c56760846",
+        "buttons": [],
+        "buttonUiType": "button",
+        "when": "Help me with size",
+        "text": "Perfect!",
+        "next": "f016ad3d-f7d0-4350-b23e-7d6a7115a5c4",
+        "delay": 2,
+        "d_left": -1119,
+        "d_top": 248
+      },
+      {
+        "type": "message",
+        "left": -1365,
+        "top": 282,
+        "w": 120,
+        "h": 40,
+        "name": "Photo scale",
+        "id": "f016ad3d-f7d0-4350-b23e-7d6a7115a5c4",
+        "buttons": [],
+        "buttonUiType": "button",
+        "text": "I would like to ask you to print a foot scale on paper. Please put your foot on it. Make sure your heel fits the bottom line.",
+        "next": "742e94b9-1ef7-4b96-8372-7c28c53a3738"
+      },
+      {
+        "type": "question",
+        "left": -1365,
+        "top": 476,
+        "w": 120,
+        "h": 40,
+        "name": "Foot PDF scale",
+        "id": "a872f27a-0591-4885-8368-0416032ec463",
+        "answers": {
+          "responses": []
+        },
+        "text": "Please send us a photo of your toes with a scale visible.",
+        "valueFormat": "ANY",
+        "matchAny": true
+      },
+      {
+        "type": "action",
+        "left": -1411,
+        "top": 377,
+        "w": 160.6489925768824,
+        "h": 47.664899257688205,
+        "name": "Example with PDF",
+        "id": "742e94b9-1ef7-4b96-8372-7c28c53a3738",
+        "action_type": "attachment",
+        "zendesk": {},
+        "filename": "foot-size.pdf",
+        "endpoint": "https://www.glisshop.co.uk/gfx/graphic/shared/ficheProduit/pedimetre-glisshop_en.pdf",
+        "set_value": "dW5kZWZpbmVk",
+        "next": "a872f27a-0591-4885-8368-0416032ec463",
+        "httpHeaders": {
+          "test": "test"
+        },
+        "contentType": "application/x-www-form-urlencoded",
+        "authentication": "Basic NGM2OGd0azhnbnBucGkxcGUyZ2prYjRjM246MTJoNXJhbTNyOHVwMDFwcjFjczZoaWp2MTFjNjY3ZWFkYzlmYXRnODdhanBncGdnOHBpaw=="
+      },
+      {
+        "type": "action",
+        "left": -1628,
+        "top": 358,
+        "w": 160.64899257688216,
+        "h": 43.08377518557796,
+        "name": "Example with XLS",
+        "id": "ff40e7f0-99a8-11e9-b023-41e58bd69422",
+        "action_type": "attachment",
+        "zendesk": {},
+        "endpoint": "https://file-examples.com/wp-content/uploads/2017/02/file_example_XLS_10.xls",
+        "set_value": "dW5kZWZpbmVk",
+        "next": "a872f27a-0591-4885-8368-0416032ec463",
+        "filename": "test.xls"
+      },
+      {
+        "type": "action",
+        "left": -1626,
+        "top": 410,
+        "w": 160.49172984325946,
+        "h": 40.957787733989505,
+        "name": "Example with JPG",
+        "id": "72238aa0-99ab-11e9-b023-41e58bd69422",
+        "action_type": "attachment",
+        "zendesk": {},
+        "endpoint": "https://file-examples.com/wp-content/uploads/2017/10/file_example_JPG_100kB.jpg",
+        "filename": "*.jpg",
+        "set_value": "dW5kZWZpbmVk",
+        "next": "a872f27a-0591-4885-8368-0416032ec463"
+      },
+      {
+        "type": "action",
+        "left": -1625,
+        "top": 473.6862508598306,
+        "w": 158.95778773398956,
+        "h": 42.71192281235983,
+        "name": "Example with MOV",
+        "id": "dd4ab970-99ab-11e9-b023-41e58bd69422",
+        "action_type": "attachment",
+        "zendesk": {},
+        "endpoint": "https://file-examples.com/wp-content/uploads/2018/04/file_example_MOV_480_700kB.mov",
+        "filename": "mov-template.mov",
+        "set_value": "dW5kZWZpbmVk",
+        "next": "a872f27a-0591-4885-8368-0416032ec463"
+      },
+      {
+        "type": "action",
+        "left": 378,
+        "top": 1449,
+        "w": 120,
+        "h": 40,
+        "name": "Action Time Conditions",
+        "id": "3d380860-9e52-11e9-96d0-01871a63f2bf",
+        "action_type": "timedate_conditional",
+        "zendesk": {},
+        "conditions": [
+          {
+            "id": "1bd8f010-9f21-11e9-98b0-95e9ca9e72e3",
+            "type": "daily",
+            "next": "3d2cbe20-6b57-11e9-918a-2db8ad8f5cb9",
+            "operator": "",
+            "varname": "",
+            "value": "",
+            "prettyDate": "Daily: 5:00 AM - 3:00 PM",
+            "recurring": {
+              "startDay": "",
+              "endDay": "",
+              "startTime": "05:00:00",
+              "endTime": "15:00:00",
+              "timezone": "Europe/Riga"
+            },
+            "timedate": {},
+            "left": 753.0346446669957,
+            "top": 1589.0902978241404,
+            "w": 120,
+            "h": 40
+          },
+          {
+            "id": "26bfec40-9f21-11e9-98b0-95e9ca9e72e3",
+            "type": "daily",
+            "next": "9bb09ac0-6b57-11e9-918a-2db8ad8f5cb9",
+            "operator": "",
+            "varname": "",
+            "value": "",
+            "prettyDate": "Daily: 4:00 PM - 11:00 PM",
+            "recurring": {
+              "startDay": "",
+              "endDay": "",
+              "startTime": "16:00:00",
+              "endTime": "23:00:00",
+              "timezone": "Europe/Riga"
+            },
+            "timedate": {},
+            "left": 753.0346446669957,
+            "top": 1589.0902978241404,
+            "w": 120,
+            "h": 40
+          }
+        ],
+        "set_value": "dW5kZWZpbmVk",
+        "next": "aa4d5800-5b69-11e9-9fd2-355725c11ffd"
+      }
+    ],
+    "defaultReply": {
+      "text": "Sorry I don;t understand",
+      "type": "message",
+      "next": null
+    },
+    "quickReplies": [
+      {
+        "id": "dedf8640-4bb7-11e9-aea3-41b08f354dc3",
+        "respond": "Happy to help you. This article will help you get started.",
+        "when": "help"
+      },
+      {
+        "id": "fcaf8350-4bb7-11e9-aea3-41b08f354dc3",
+        "respond": "You are welcome! If you find any problems, please let us know.",
+        "when": "thanks, bye, thank you, thank, thk, ty, ok, No Thanks"
+      }
+    ],
+    "pbSms": {},
+    "name": "Apple Business Chat",
+    "id": "93a0e3c2-53fd-44da-a6f0-54e8c9c7d4a5",
+    "createdBy": "Michal Wojtowicz",
+    "createdDate": "March 21 2019 07:19:09 am",
+    "lastModifiedBy": "Demo Admin",
+    "lastModifiedDate": "July 09 2019 09:23:19 am",
+    "appleBusinessChat": {
+      "cspID": "dfd14da4-46d7-4d6a-973e-1991dae5dac1",
+      "apiSecret": "LGOtUvUERBLt+B+5Sy+Lp+8XNwF6sm16WRiqC4htIGs=",
+      "businessChatID": "bd0bc980-3468-4f63-9a02-1cd6431496b9",
+      "merchant": {
+        "id": "merchant.com.pitneybowes.converse",
+        "displayName": "Pitney Bowes",
+        "identity": "Bag Attributes\n    friendlyName: Apple Pay Merchant Identity:merchant.com.pitneybowes.converse\n    localKeyID: A7 C3 7E A3 E1 35 A7 65 1C 23 64 8C 1B 6F C9 E8 0C 95 B3 8F \nsubject=/UID=merchant.com.pitneybowes.converse/CN=Apple Pay Merchant Identity:merchant.com.pitneybowes.converse/OU=72NX38Y9GF/O=Pitney Bowes\nissuer=/C=US/O=Apple Inc./OU=Apple Worldwide Developer Relations/CN=Apple Worldwide Developer Relations Certification Authority\n-----BEGIN CERTIFICATE-----\nMIIGRzCCBS+gAwIBAgIIWC+mmzV1SkswDQYJKoZIhvcNAQELBQAwgZYxCzAJBgNV\nBAYTAlVTMRMwEQYDVQQKDApBcHBsZSBJbmMuMSwwKgYDVQQLDCNBcHBsZSBXb3Js\nZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9uczFEMEIGA1UEAww7QXBwbGUgV29ybGR3\naWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkw\nHhcNMTkwMjA3MDkzMTAwWhcNMjEwMzA4MDkzMTAwWjCBpzExMC8GCgmSJomT8ixk\nAQEMIW1lcmNoYW50LmNvbS5waXRuZXlib3dlcy5jb252ZXJzZTFGMEQGA1UEAww9\nQXBwbGUgUGF5IE1lcmNoYW50IElkZW50aXR5Om1lcmNoYW50LmNvbS5waXRuZXli\nb3dlcy5jb252ZXJzZTETMBEGA1UECwwKNzJOWDM4WTlHRjEVMBMGA1UECgwMUGl0\nbmV5IEJvd2VzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ZuP+pOD\n8Lv31jFUZGY/WggG6PmKO+JXHE4ReLjFYvJuCaCNaMcq/U9ZIJP0X7bVp2Zd+zRn\nlNJvxUkS18geVeSiQabfsQbihxwXkIBhZe1X8wWljMQWm9Y8hDzTwHn7zSUB1Hqu\n2kvKiRANANJmiW9EUHg/Jbc6uBgGnTL5gUriZij/L7QE2/O3NgZ6SnYpZdd64ip9\n68RaSQ06lMZuoZX7zsfHls0q0L+8AWOknS1nxuH7Idh5d3AAEXjf7G+oW+41GVzu\n7/GGAfjkWvYiN6wbfuSMZnaI5nSBDsvBnKW1Q6TlEXrZSkJIMxuIUYQcDdVww0KM\nBDY2Oc0TQcAvKQIDAQABo4IChDCCAoAwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAW\ngBSIJxcJqbYYYIvs67r2R1nFUlSjtzBHBggrBgEFBQcBAQQ7MDkwNwYIKwYBBQUH\nMAGGK2h0dHA6Ly9vY3NwLmFwcGxlLmNvbS9vY3NwMDMtYXBwbGV3d2RyY2EyMDYw\nggEsBgNVHSAEggEjMIIBHzCCARsGCSqGSIb3Y2QFATCCAQwwNgYIKwYBBQUHAgEW\nKmh0dHA6Ly93d3cuYXBwbGUuY29tL2NlcnRpZmljYXRlYXV0aG9yaXR5LzCB0QYI\nKwYBBQUHAgIwgcQMgcFSZWxpYW5jZSBvbiB0aGlzIENlcnRpZmljYXRlIGJ5IGFu\neSBwYXJ0eSBvdGhlciB0aGFuIEFwcGxlIGlzIHByb2hpYml0ZWQuIFJlZmVyIHRv\nIHRoZSBhcHBsaWNhYmxlIHN0YW5kYXJkIHRlcm1zIGFuZCBjb25kaXRpb25zIG9m\nIHVzZSwgY2VydGlmaWNhdGUgcG9saWN5IGFuZCBjZXJ0aWZpY2F0aW9uIHByYWN0\naWNlIHN0YXRlbWVudHMuMBMGA1UdJQQMMAoGCCsGAQUFBwMCMDAGA1UdHwQpMCcw\nJaAjoCGGH2h0dHA6Ly9jcmwuYXBwbGUuY29tL3d3ZHJjYS5jcmwwHQYDVR0OBBYE\nFKfDfqPhNadlHCNkjBtvyegMlbOPMA4GA1UdDwEB/wQEAwIHgDBPBgkqhkiG92Nk\nBiAEQgxAQUI3NDc3NzE2MTBDQUVEM0IzREIzMzJDMDI5NkYyNUYyMDFEQ0JGM0E3\nNDZEMzQ3NjdGM0JBQzYzMzdBM0Q2MTAPBgkqhkiG92NkBi4EAgUAMA0GCSqGSIb3\nDQEBCwUAA4IBAQAJkyxdwoPAp4yQA6eN0ZlmAvqrqNUzHTr0zfZic4eTgjv8o68N\ngS2XeVI0LqHLo42CGPaPxwdOkap4qsgtTH73MHEGX5TtRaeQ4e/sMsvF90oNb01X\nDCKD0zWgnqBnEr63baGQhDb6hSMPICsy41Lxso3zyfLvuX7po7B6icBjgd7v5rsu\nlDeYY7kmjEweeJcj1luP0XF5+HvuhvU7r7YqhW/Q7NyGKYrF+lxqD6LFszt/89zQ\nfZ+J6FcbR498F5QXmYXBCA/8p2ADk6XAUf/MjJi9Dua+pOPcKUz9pnsnwI9Fqw8W\ntad5ZgsJlX+M9YqxyQAQBkDZF5pY9Y3V4eus\n-----END CERTIFICATE-----\nBag Attributes\n    friendlyName: Apple Pay Merchant Identity:merchant.com.pitneybowes.converse\n    localKeyID: A7 C3 7E A3 E1 35 A7 65 1C 23 64 8C 1B 6F C9 E8 0C 95 B3 8F \nsubject=/UID=merchant.com.pitneybowes.converse/CN=Apple Pay Merchant Identity:merchant.com.pitneybowes.converse/OU=72NX38Y9GF/O=Pitney Bowes\nissuer=/C=US/O=Apple Inc./OU=Apple Worldwide Developer Relations/CN=Apple Worldwide Developer Relations Certification Authority\n-----BEGIN CERTIFICATE-----\nMIIGRzCCBS+gAwIBAgIIWC+mmzV1SkswDQYJKoZIhvcNAQELBQAwgZYxCzAJBgNV\nBAYTAlVTMRMwEQYDVQQKDApBcHBsZSBJbmMuMSwwKgYDVQQLDCNBcHBsZSBXb3Js\nZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9uczFEMEIGA1UEAww7QXBwbGUgV29ybGR3\naWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkw\nHhcNMTkwMjA3MDkzMTAwWhcNMjEwMzA4MDkzMTAwWjCBpzExMC8GCgmSJomT8ixk\nAQEMIW1lcmNoYW50LmNvbS5waXRuZXlib3dlcy5jb252ZXJzZTFGMEQGA1UEAww9\nQXBwbGUgUGF5IE1lcmNoYW50IElkZW50aXR5Om1lcmNoYW50LmNvbS5waXRuZXli\nb3dlcy5jb252ZXJzZTETMBEGA1UECwwKNzJOWDM4WTlHRjEVMBMGA1UECgwMUGl0\nbmV5IEJvd2VzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ZuP+pOD\n8Lv31jFUZGY/WggG6PmKO+JXHE4ReLjFYvJuCaCNaMcq/U9ZIJP0X7bVp2Zd+zRn\nlNJvxUkS18geVeSiQabfsQbihxwXkIBhZe1X8wWljMQWm9Y8hDzTwHn7zSUB1Hqu\n2kvKiRANANJmiW9EUHg/Jbc6uBgGnTL5gUriZij/L7QE2/O3NgZ6SnYpZdd64ip9\n68RaSQ06lMZuoZX7zsfHls0q0L+8AWOknS1nxuH7Idh5d3AAEXjf7G+oW+41GVzu\n7/GGAfjkWvYiN6wbfuSMZnaI5nSBDsvBnKW1Q6TlEXrZSkJIMxuIUYQcDdVww0KM\nBDY2Oc0TQcAvKQIDAQABo4IChDCCAoAwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAW\ngBSIJxcJqbYYYIvs67r2R1nFUlSjtzBHBggrBgEFBQcBAQQ7MDkwNwYIKwYBBQUH\nMAGGK2h0dHA6Ly9vY3NwLmFwcGxlLmNvbS9vY3NwMDMtYXBwbGV3d2RyY2EyMDYw\nggEsBgNVHSAEggEjMIIBHzCCARsGCSqGSIb3Y2QFATCCAQwwNgYIKwYBBQUHAgEW\nKmh0dHA6Ly93d3cuYXBwbGUuY29tL2NlcnRpZmljYXRlYXV0aG9yaXR5LzCB0QYI\nKwYBBQUHAgIwgcQMgcFSZWxpYW5jZSBvbiB0aGlzIENlcnRpZmljYXRlIGJ5IGFu\neSBwYXJ0eSBvdGhlciB0aGFuIEFwcGxlIGlzIHByb2hpYml0ZWQuIFJlZmVyIHRv\nIHRoZSBhcHBsaWNhYmxlIHN0YW5kYXJkIHRlcm1zIGFuZCBjb25kaXRpb25zIG9m\nIHVzZSwgY2VydGlmaWNhdGUgcG9saWN5IGFuZCBjZXJ0aWZpY2F0aW9uIHByYWN0\naWNlIHN0YXRlbWVudHMuMBMGA1UdJQQMMAoGCCsGAQUFBwMCMDAGA1UdHwQpMCcw\nJaAjoCGGH2h0dHA6Ly9jcmwuYXBwbGUuY29tL3d3ZHJjYS5jcmwwHQYDVR0OBBYE\nFKfDfqPhNadlHCNkjBtvyegMlbOPMA4GA1UdDwEB/wQEAwIHgDBPBgkqhkiG92Nk\nBiAEQgxAQUI3NDc3NzE2MTBDQUVEM0IzREIzMzJDMDI5NkYyNUYyMDFEQ0JGM0E3\nNDZEMzQ3NjdGM0JBQzYzMzdBM0Q2MTAPBgkqhkiG92NkBi4EAgUAMA0GCSqGSIb3\nDQEBCwUAA4IBAQAJkyxdwoPAp4yQA6eN0ZlmAvqrqNUzHTr0zfZic4eTgjv8o68N\ngS2XeVI0LqHLo42CGPaPxwdOkap4qsgtTH73MHEGX5TtRaeQ4e/sMsvF90oNb01X\nDCKD0zWgnqBnEr63baGQhDb6hSMPICsy41Lxso3zyfLvuX7po7B6icBjgd7v5rsu\nlDeYY7kmjEweeJcj1luP0XF5+HvuhvU7r7YqhW/Q7NyGKYrF+lxqD6LFszt/89zQ\nfZ+J6FcbR498F5QXmYXBCA/8p2ADk6XAUf/MjJi9Dua+pOPcKUz9pnsnwI9Fqw8W\ntad5ZgsJlX+M9YqxyQAQBkDZF5pY9Y3V4eus\n-----END CERTIFICATE-----\nBag Attributes\n    friendlyName: MichaB Wůjtowicz\n    localKeyID: A7 C3 7E A3 E1 35 A7 65 1C 23 64 8C 1B 6F C9 E8 0C 95 B3 8F \nKey Attributes: <No Attributes>\n-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZm4/6k4Pwu/fW\nMVRkZj9aCAbo+Yo74lccThF4uMVi8m4JoI1oxyr9T1kgk/RfttWnZl37NGeU0m/F\nSRLXyB5V5KJBpt+xBuKHHBeQgGFl7VfzBaWMxBab1jyEPNPAefvNJQHUeq7aS8qJ\nEA0A0maJb0RQeD8ltzq4GAadMvmBSuJmKP8vtATb87c2BnpKdill13riKn3rxFpJ\nDTqUxm6hlfvOx8eWzSrQv7wBY6SdLWfG4fsh2Hl3cAAReN/sb6hb7jUZXO7v8YYB\n+ORa9iI3rBt+5IxmdojmdIEOy8GcpbVDpOURetlKQkgzG4hRhBwN1XDDQowENjY5\nzRNBwC8pAgMBAAECggEAIZsFlDP910qgDqMVnl+v/u5oashG0dK1kzh3OEaIrSw1\nVCVIUVsYx3/eispune11d2G2t9my+We6PSR41XwhOzCQ4kSsHQGsMCNlfDpnUD9k\nKrK/i0qpFy3xsJZYOUxdV6QUcUT1Bd9YiuxApdTYYvcc/LRlRCTU26NSOiqqH44w\n/MxvHQW5HHuLrEcRF7I0exoTC7LmgxVsby1sR0tE4AhVgaEZP7PGW3oCTJroxL1y\nJAo1zTbH+eV4+DyqzoH/lW70LZgL1vypz4zACHXKlCWpebUymmLW2/AgB0sLOgSp\n8Ie3solagvcPvRcb16gQS8zc5NMkMHcqOWWjMSQp0QKBgQD6ErMmLtDiPnE7fPYB\nBFujaTBQYy5u1btzf3XDVpxH3gBdMsLTpVZXCTcLYPzYrPLAxgOd9KgsAs7PA0XL\ngFfNk5232WSrFKdPBeh6TIEdBstGGrNv8NWDV6G/mQ+SPoqYRC9AcQJABM/sFb/1\n6QxNpb3lV1qF6aFYTWBijjmthQKBgQDew+GaIu/hRpu/fWcLp+hi5X63nd6v9Llq\nMxin3W1AgW986zmETQCaE9ye9LN0AA7FN6V7XePcBTlJmRKM9/+4zUIoTIkC5qJY\nEE91FE3wrdl7ibYF4e0s8jqWk3qcJ8CC7XV8TUcsUnvguhuuXSOAtQG/vL6xdHec\nEbYaiWbqVQKBgQCAlFba3h13BsYv4SuYEEaR+gbmfmikgm7Ujwfc/U5zwVkMkooM\nSqnfLJTJ2/+F5T8YEXhQojhKENOHK1aasQ30XN8uZa/WK1NvVUlYgLeuVgz0qcvz\nVbBizQ8Utb2E43Vdn0lwZ+rRQegqqnA+H6q8zeia4FRiIGNeRMK3SgusBQKBgCfK\nIS/g8avxarxnb9J7KV0Q1PODNVWEhuHbQpopSOxusjVD5sAk6Oich5m056DeqcS8\nTcidWqfgHv1wZAnd+kVOFHUSRp7IB1NnhmnJOKq2wtP4IxUl57FRivl+WjYuO4qn\nU4biXsYh7ZKUa4FXjZHdwvQ2iHE19m9gEoDm7gUJAoGBAII53ZEi1xzNd+eeTv5R\n/pvLoQO/9TLRdTAX0QAcxtrzkytO54pOKKQfOHAIv5Br5aHowz17S6EKKHGq+sPq\nOjpJfjxt63f1bzQ8zNwJ8R3IftbJ91MWPHmVhUWVeyozHxGit9uYFmnqC8Jw2dpD\n8DDOJgZMjNmuYzIzEpCHuGmL\n-----END PRIVATE KEY-----\nBag Attributes\n    friendlyName: MichaB Wůjtowicz\n    localKeyID: A7 C3 7E A3 E1 35 A7 65 1C 23 64 8C 1B 6F C9 E8 0C 95 B3 8F \nKey Attributes: <No Attributes>\n-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZm4/6k4Pwu/fW\nMVRkZj9aCAbo+Yo74lccThF4uMVi8m4JoI1oxyr9T1kgk/RfttWnZl37NGeU0m/F\nSRLXyB5V5KJBpt+xBuKHHBeQgGFl7VfzBaWMxBab1jyEPNPAefvNJQHUeq7aS8qJ\nEA0A0maJb0RQeD8ltzq4GAadMvmBSuJmKP8vtATb87c2BnpKdill13riKn3rxFpJ\nDTqUxm6hlfvOx8eWzSrQv7wBY6SdLWfG4fsh2Hl3cAAReN/sb6hb7jUZXO7v8YYB\n+ORa9iI3rBt+5IxmdojmdIEOy8GcpbVDpOURetlKQkgzG4hRhBwN1XDDQowENjY5\nzRNBwC8pAgMBAAECggEAIZsFlDP910qgDqMVnl+v/u5oashG0dK1kzh3OEaIrSw1\nVCVIUVsYx3/eispune11d2G2t9my+We6PSR41XwhOzCQ4kSsHQGsMCNlfDpnUD9k\nKrK/i0qpFy3xsJZYOUxdV6QUcUT1Bd9YiuxApdTYYvcc/LRlRCTU26NSOiqqH44w\n/MxvHQW5HHuLrEcRF7I0exoTC7LmgxVsby1sR0tE4AhVgaEZP7PGW3oCTJroxL1y\nJAo1zTbH+eV4+DyqzoH/lW70LZgL1vypz4zACHXKlCWpebUymmLW2/AgB0sLOgSp\n8Ie3solagvcPvRcb16gQS8zc5NMkMHcqOWWjMSQp0QKBgQD6ErMmLtDiPnE7fPYB\nBFujaTBQYy5u1btzf3XDVpxH3gBdMsLTpVZXCTcLYPzYrPLAxgOd9KgsAs7PA0XL\ngFfNk5232WSrFKdPBeh6TIEdBstGGrNv8NWDV6G/mQ+SPoqYRC9AcQJABM/sFb/1\n6QxNpb3lV1qF6aFYTWBijjmthQKBgQDew+GaIu/hRpu/fWcLp+hi5X63nd6v9Llq\nMxin3W1AgW986zmETQCaE9ye9LN0AA7FN6V7XePcBTlJmRKM9/+4zUIoTIkC5qJY\nEE91FE3wrdl7ibYF4e0s8jqWk3qcJ8CC7XV8TUcsUnvguhuuXSOAtQG/vL6xdHec\nEbYaiWbqVQKBgQCAlFba3h13BsYv4SuYEEaR+gbmfmikgm7Ujwfc/U5zwVkMkooM\nSqnfLJTJ2/+F5T8YEXhQojhKENOHK1aasQ30XN8uZa/WK1NvVUlYgLeuVgz0qcvz\nVbBizQ8Utb2E43Vdn0lwZ+rRQegqqnA+H6q8zeia4FRiIGNeRMK3SgusBQKBgCfK\nIS/g8avxarxnb9J7KV0Q1PODNVWEhuHbQpopSOxusjVD5sAk6Oich5m056DeqcS8\nTcidWqfgHv1wZAnd+kVOFHUSRp7IB1NnhmnJOKq2wtP4IxUl57FRivl+WjYuO4qn\nU4biXsYh7ZKUa4FXjZHdwvQ2iHE19m9gEoDm7gUJAoGBAII53ZEi1xzNd+eeTv5R\n/pvLoQO/9TLRdTAX0QAcxtrzkytO54pOKKQfOHAIv5Br5aHowz17S6EKKHGq+sPq\nOjpJfjxt63f1bzQ8zNwJ8R3IftbJ91MWPHmVhUWVeyozHxGit9uYFmnqC8Jw2dpD\n8DDOJgZMjNmuYzIzEpCHuGmL\n-----END PRIVATE KEY-----",
+        "domainValidation": "MIIQ-QYJKoZIhvcNAQcCoIIQ6jCCEOYCAQExCzAJBgUrDgMCGgUAMIGOBgkqhkiG9w0BBwGggYAE\nfnsidGVhbUlkIjoiNzJOWDM4WTlHRiIsImRvbWFpbiI6InNhOTI5OWIuY29udmVyc2UtcWEtaWFk\nLmNlcy5waXRuZXljbG91ZC5jb20iLCJkYXRlQ3JlYXRlZCI6IjIwMTktMDQtMTEsMTU6MjM6NTci\nLCJ2ZXJzaW9uIjoxfaCCDbEwggPzMIIC26ADAgECAgEXMA0GCSqGSIb3DQEBBQUAMGIxCzAJBgNV\nBAYTAlVTMRMwEQYDVQQKEwpBcHBsZSBJbmMuMSYwJAYDVQQLEx1BcHBsZSBDZXJ0aWZpY2F0aW9u\nIEF1dGhvcml0eTEWMBQGA1UEAxMNQXBwbGUgUm9vdCBDQTAeFw0wNzA0MTIxNzQzMjhaFw0yMjA0\nMTIxNzQzMjhaMHkxCzAJBgNVBAYTAlVTMRMwEQYDVQQKEwpBcHBsZSBJbmMuMSYwJAYDVQQLEx1B\ncHBsZSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTEtMCsGA1UEAxMkQXBwbGUgaVBob25lIENlcnRp\nZmljYXRpb24gQXV0aG9yaXR5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAox6-8EfA\ntJ4QW0akuCG4T4YhcChFYFwcw8gKZGOI-_xp7vhU_OlbtwZOBC_DazOvREzqS4AJtIf2W7T9ZN2z\ncuATs_0X2bznqO3CjGHCKvnszqVe1mnrZAuNCI-4oFBGCdwZ5OWwlG2795mYxOibQU7U8WXjG1J6\n3OgD2W4d2hBVhqQpWEkM6kfXFTQz9sCgREpwviy1KjA3jC4V69HkbJc4VVaxNStY6kSjJoXuyGZK\n5M-J8D1jrSnerbpas9ylo5qnCU6AFjVlpIUNY3s-Y4rafUpG7KM5GDS5xihlGLwTYJx_V6wUyYnt\nobaHaFK2hE64yIPs-Z4Zq7PBC4bHnwIDAQABo4GcMIGZMA4GA1UdDwEB_wQEAwIBhjAPBgNVHRMB\nAf8EBTADAQH_MB0GA1UdDgQWBBTnNCouIt45YGu0lM53g2EvMaB8NTAfBgNVHSMEGDAWgBQr0GlH\nlHYJ_vRrjS5ApvdHTX8IXjA2BgNVHR8ELzAtMCugKaAnhiVodHRwOi8vd3d3LmFwcGxlLmNvbS9h\ncHBsZWNhL3Jvb3QuY3JsMA0GCSqGSIb3DQEBBQUAA4IBAQAd0dV73XRO1xf8gi0MmZteQnLyadzV\na14NDGtLPnsUJd6zlOig-g-AifIXPQACopGRvnRX3K-an6EKfTC-ACrMIVnr_UmsbnUZ6Jp6A9GG\n9uf2sA5LSfqjt0G619HjVqF9g6uXrvhRSibBhUITJo0DVGYQXmCEBRIxK2tUwKDIQbxUHudUrRMA\n0krHu8GKr4EIjvBGCr8npr7czzk6gHAZIzKja2Zdnk2oR0mye0W1UTOndGcJTrZsb0j3LLkzBURr\nRb50S2-yhpG0PiUoJZ6zwlGG_E_lrzuqu0QsAUnidLM0-kTvFMIR8i0ZGlGJ0whKQWxYVt6bOuEF\nV-Viz9IPMIID-DCCAuCgAwIBAgIIPXIg48-M8iUwDQYJKoZIhvcNAQEFBQAweTELMAkGA1UEBhMC\nVVMxEzARBgNVBAoTCkFwcGxlIEluYy4xJjAkBgNVBAsTHUFwcGxlIENlcnRpZmljYXRpb24gQXV0\naG9yaXR5MS0wKwYDVQQDEyRBcHBsZSBpUGhvbmUgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcN\nMTQwNzExMDEzNTI1WhcNMjIwNDEyMTc0MzI4WjBZMQswCQYDVQQGEwJVUzETMBEGA1UECgwKQXBw\nbGUgSW5jLjE1MDMGA1UEAwwsQXBwbGUgaVBob25lIE9TIFByb3Zpc2lvbmluZyBQcm9maWxlIFNp\nZ25pbmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDn2ZrDF6PJ6QfVx5mktHUhTBED\naB8wLAecd4gxSMhEBI2BzXrG-NP2RxxtTu665hSFccTvebNLddpohaZzVaLGh1F71xyBtQFq44yR\n7noq_M-VXvlxoCh--avU4c4OT5Xzyu23lQoy_yWZNvaYnSSLZFe29f2-RSH5rkR2t-qwO2mfbX9-\n1xGbsupDouX9JkfOzMQH4ud1xtv8fha1pJPGfK89vd3AL4B4djpOfNhkTyolUYdBdg5u4JOkIao-\nXcpfp4sLQKUvs7NqSsfGU7UfXCyKiO7kkC-f3VI-FkHGOB5oJI8xLdtpcc-g80IaKBFKdJym1nhJ\nWA3EvBxb8T17AgMBAAGjgaMwgaAwHQYDVR0OBBYEFKReazv8ekdykXAJwSS9LzvJe6C-MAwGA1Ud\nEwEB_wQCMAAwHwYDVR0jBBgwFoAU5zQqLiLeOWBrtJTOd4NhLzGgfDUwMAYDVR0fBCkwJzAloCOg\nIYYfaHR0cDovL2NybC5hcHBsZS5jb20vaXBob25lLmNybDALBgNVHQ8EBAMCB4AwEQYLKoZIhvdj\nZAYCAgEEAgUAMA0GCSqGSIb3DQEBBQUAA4IBAQCKtlZOQdKx8yFDnQvZx_-0mFiZ7UGnMPHv29qA\nbSG2s1zcvofxOSG8xKHaJtLtpvHtwBGVGaxHuCoOaZjU5ubOa-oiwSunAW5BTCwd4yOMhiejjBec\nzBvu2GQzD0QOiztIYhNiVNNxTZItgTr_psuOXENxbIgzIjwgPx14uf8aKiHoc2nPm6Gh4T3pDBe8\nqXPX6VK6wrYfoSKFPrhcGrKae5_My1A6_pbH_EhH9CSirT5M-0rbZ5wDcRUnP4NS-7L0GRapPqns\nFOxewgqn803RMKrUrbgyoVAvTVXIQiesHM5yZPAs4AnkTLkLIDU3nNULkcQxHdAr4lyCvX3Q_giZ\nMIIFujCCBKKgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBhjELMAkGA1UEBhMCVVMxHTAbBgNVBAoT\nFEFwcGxlIENvbXB1dGVyLCBJbmMuMS0wKwYDVQQLEyRBcHBsZSBDb21wdXRlciBDZXJ0aWZpY2F0\nZSBBdXRob3JpdHkxKTAnBgNVBAMTIEFwcGxlIFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MB4X\nDTA1MDIxMDAwMTgxNFoXDTI1MDIxMDAwMTgxNFowgYYxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRB\ncHBsZSBDb21wdXRlciwgSW5jLjEtMCsGA1UECxMkQXBwbGUgQ29tcHV0ZXIgQ2VydGlmaWNhdGUg\nQXV0aG9yaXR5MSkwJwYDVQQDEyBBcHBsZSBSb290IENlcnRpZmljYXRlIEF1dGhvcml0eTCCASIw\nDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOSRqQkfkdseR1DrBe1eeYQt6zaiV0xV7IsZid75\nS2z1B6siMALoGD74UAnTf0GomPnRymacJGsR0KO75Bsqwx-VnnoMpEeLW9QWNzPLxA9NzhRp0ckZ\ncvVdDtV_X5vyJQO6VY9NXQ3xZDUjFUsVWR2zlPf2nJ7PULrBWFBnjwi0IPfLrCwgb3C2PwEwjLdD\nzw-dPfMrSSgayP7OtbkO2V4c1ss9tTqt9A8OAJILsSEWLnTVPA3bYharo3GSR1NVwa8vQbP4--Nw\nzeajTEV-H0xrUJZBicR0YgsQg0GHM4qBsTBY7FoEMoxos48d3mVz_2deZbxJ2HafMxRloXeUyS0C\nAwEAAaOCAi8wggIrMA4GA1UdDwEB_wQEAwIBBjAPBgNVHRMBAf8EBTADAQH_MB0GA1UdDgQWBBQr\n0GlHlHYJ_vRrjS5ApvdHTX8IXjAfBgNVHSMEGDAWgBQr0GlHlHYJ_vRrjS5ApvdHTX8IXjCCASkG\nA1UdIASCASAwggEcMIIBGAYJKoZIhvdjZAUBMIIBCTBBBggrBgEFBQcCARY1aHR0cHM6Ly93d3cu\nYXBwbGUuY29tL2NlcnRpZmljYXRlYXV0aG9yaXR5L3Rlcm1zLmh0bWwwgcMGCCsGAQUFBwICMIG2\nGoGzUmVsaWFuY2Ugb24gdGhpcyBjZXJ0aWZpY2F0ZSBieSBhbnkgcGFydHkgYXNzdW1lcyBhY2Nl\ncHRhbmNlIG9mIHRoZSB0aGVuIGFwcGxpY2FibGUgc3RhbmRhcmQgdGVybXMgYW5kIGNvbmRpdGlv\nbnMgb2YgdXNlLCBjZXJ0aWZpY2F0ZSBwb2xpY3kgYW5kIGNlcnRpZmljYXRpb24gcHJhY3RpY2Ug\nc3RhdGVtZW50cy4wRAYDVR0fBD0wOzA5oDegNYYzaHR0cHM6Ly93d3cuYXBwbGUuY29tL2NlcnRp\nZmljYXRlYXV0aG9yaXR5L3Jvb3QuY3JsMFUGCCsGAQUFBwEBBEkwRzBFBggrBgEFBQcwAoY5aHR0\ncHM6Ly93d3cuYXBwbGUuY29tL2NlcnRpZmljYXRlYXV0aG9yaXR5L2Nhc2lnbmVycy5odG1sMA0G\nCSqGSIb3DQEBBQUAA4IBAQCd2i0oWC99dgS5BNM-zrdmY06PL9T-S61yvaM5xlJNBZhS9YlRASR5\nvhoy9-VEi0tEBzmC1lrKtCBe2a4VXR2MHTK_ODFiSF3H4ZCx-CRA-F9Ym1FdV53B5f88zHIhbsTp\n6aF31ywXJsM_65roCwO66bNKcuszCVut5mIxauivL9WvHld2j383LS4CXN1jyfJxuCZA3xWNdUQ_\neb3mHZnhQyw-rW--uaT-DjUZUWOxw961kj5ReAFziqQjyqSI8R5cH0EWLX6VCqrpiUGYGxrdyyC_\nR14MJsVVNU3GMIuZZxTHCR-6R8faAQmHJEKVvRNgGQrv6n8Obs3BREM6StXjMYICjDCCAogCAQEw\ngYUweTELMAkGA1UEBhMCVVMxEzARBgNVBAoTCkFwcGxlIEluYy4xJjAkBgNVBAsTHUFwcGxlIENl\ncnRpZmljYXRpb24gQXV0aG9yaXR5MS0wKwYDVQQDEyRBcHBsZSBpUGhvbmUgQ2VydGlmaWNhdGlv\nbiBBdXRob3JpdHkCCD1yIOPPjPIlMAkGBSsOAwIaBQCggdwwGAYJKoZIhvcNAQkDMQsGCSqGSIb3\nDQEHATAcBgkqhkiG9w0BCQUxDxcNMTkwNDExMTUyMzU3WjAjBgkqhkiG9w0BCQQxFgQUAcxF4du0\nIlYyKhag7X6V4SwxB08wKQYJKoZIhvcNAQk0MRwwGjAJBgUrDgMCGgUAoQ0GCSqGSIb3DQEBAQUA\nMFIGCSqGSIb3DQEJDzFFMEMwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCAMA0GCCqGSIb3DQMC\nAgFAMAcGBSsOAwIHMA0GCCqGSIb3DQMCAgEoMA0GCSqGSIb3DQEBAQUABIIBAOCEBVLj7aiztvGb\nSvJeSeUVrC8rL-vEOJpotIE6hmiTIE1H8rEkRqiwN2nkxZaasMb1TmIZh7iBvfDffn07t_K0ABSS\nFjovxs07LzBRf8obG10G5uJ0gl8Tu4othEr7lV9n-kd59_tmslX0P-Qw_4et6rpmL3KCDRrbmNBB\nxP45SKwRIoKzt1myl6PClbVrBZ2W0G6Q3-yxCwv_TYeLwu9s77erT4NfdD0oUEQfvKhVzr63sebV\noPwxQUNNOdQ2ctZ5Hsi5qi1rV9Gyvsoh4CzopnYhMqcPuXRh08eIqllinQ2GEhu0EMwFeT6e4Ue0\nOWKJuCRI_3rAR6Le_SElv3c"
+      },
+      "businessChatName": "Converse QA",
+      "oAuth": {
+        "clientSecret": "12h5ram3r8up01pr1cs6hijv11c667eadc9fatg87ajpgpgg8pik",
+        "scopes": "openid"
+      }
+    },
+    "pbanalytics_on": true,
+    "matchTypeErrors": {
+      "validDateTime": "Use an example to enter a correct Time format : 2019-04-29T08:00+0000"
+    },
+    "session_timeout_hours": null,
+    "page_id": "284337682390332",
+    "app_secret": "f41fbd4ad206d84d1a690dc1a5ef58a1",
+    "verify_token": "apple",
+    "getStartedBtn_on": false,
+    "page_access_token": "EAAECmoaOHTwBAAbm5BNuy07L2q8v40ZBJEEqss4zV2ZBTJZAj56FPrhQn06Fl9wMkt3oPyQk7zrv9owPmpmZBpQgdxJZAiMZApvHDXZA66hdad2ntOJFC5WaGTNItz8m5rgkON1C9VDzxVCLUXL1FM7rlfVXFN3xQMqv3uWiZAdBTAZDZD",
+    "app2check_on": false,
+    "app2check_apiKey": "",
+    "attachments": {
+      "allowedTypes": "",
+      "recipientEmail": "converse.auto.test@gmail.com"
+    },
+    "defaultAnswerReply": "The default message that will be sent to the user when they enter a response that is not understood",
+    "afterLogout": null,
+    "liveTakeover": {
+      "endAction": null,
+      "selectionEndpoint": "http://eoc-products-api-example.us-east-1.elasticbeanstalk.com",
+      "startAction": "Welcome to online support group"
+    },
+    "globals": {
+      "system": "system"
+    },
+    "description": "https://raw.githubusercontent.com/wdsk23/Converse/master/listdata.json",
+    "agentRequest": {
+      "noAgentsAction": "3d2cbe20-6b57-11e9-918a-2db8ad8f5cb9",
+      "requestPendingMessage": "Please wait for a min while we are looking for an agent..."
+    },
+    "afterLogin": "bbc0cd4e-1051-4eb4-a1ff-30109f0ca825",
+    "_getStartedBtnInitValue": false
+  },
+  "intentions": [
+    {
+      "name": "start",
+      "utterances": [
+        {
+          "id": "7d819660-cba0-11e7-949d-d1afd6e026a9",
+          "text": "start",
+          "aiLang": null
+        },
+        {
+          "id": "7f710a50-cba0-11e7-949d-d1afd6e026a9",
+          "text": "let's go",
+          "aiLang": null
+        },
+        {
+          "id": "985df5f0-cba0-11e7-949d-d1afd6e026a9",
+          "text": "GET_STARTED_PAYLOAD",
+          "aiLang": null
+        },
+        {
+          "id": "b59d7f70-d96d-11e7-8034-41d5716fd965",
+          "text": "send message",
+          "aiLang": null
+        },
+        {
+          "id": "bd6abf40-d9bf-11e7-8034-41d5716fd965",
+          "text": "restart",
+          "aiLang": null
+        },
+        {
+          "id": "e2f31260-89ca-11e8-998f-311906beb311",
+          "text": "get started",
+          "aiLang": null
+        },
+        {
+          "id": "e59c3960-89ca-11e8-998f-311906beb311",
+          "text": "get_started",
+          "aiLang": null
+        },
+        {
+          "id": "eac77760-89ca-11e8-998f-311906beb311",
+          "text": "go",
+          "aiLang": null
+        },
+        {
+          "id": "ed4d8600-89ca-11e8-998f-311906beb311",
+          "text": "let('?)s go",
+          "aiLang": null
+        },
+        {
+          "id": "64801d30-9ef3-11e9-84ad-b1fd29561c23",
+          "text": "start .*",
+          "aiLang": "en"
+        }
+      ],
+      "id": "8f01dfac-86d5-49ec-bb6d-f6f0ba2e24ab"
+    }
+  ]
+}

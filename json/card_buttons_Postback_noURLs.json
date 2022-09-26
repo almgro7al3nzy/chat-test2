@@ -1,0 +1,13 @@
+[
+    {
+        "title": "title",
+        "subtitle": "subtitle",
+        "buttons": [
+            {
+                "type": "postback",
+                "title": "postback title",
+                "payload": "payload"
+            }
+        ]
+    }
+]

@@ -1,0 +1,20 @@
+[                                                                                                                                                                                                        
+{
+  "content_type":"text",
+  "title":"required 1",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png", 
+  "payload":"message1"
+},
+{
+  "content_type":"text",
+  "title":"required 2",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png", 
+  "payload":"message2"
+},
+{
+  "content_type":"text",
+  "title":"required 3",
+  "image_url":"https://converse-qa-iad.ces.pitneycloud.com/pb-circle-mark.png", 
+  "payload":"message3"
+}
+]
